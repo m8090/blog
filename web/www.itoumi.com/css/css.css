@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
+blockquote,th,td {margin:0;padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0}
+address,caption,cite,code,dfn,em,strong,th,var
+{font-style:normal;font-weight:normal}
+ol,ul {list-style:none}
+caption,th {text-align:left}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal}
+q:before,q:after {content:''}
+abbr,acronym { border:0}
+.ml30{ margin-left:30px;}
+.tc{ text-align:center}
+
+body,html{ height:100%}
+.nofind_main{ background:#f0f0f0; width:100%; overflow:hidden;height:100%; }
+.btn_common{ 
+text-align:center; 
+color:#ffffff;  
+display:inline-block;
+background:url(../images/404_07.png) no-repeat; width:128px; height:41px;
+line-height:41px; text-decoration:none;
+font-size:14px;
+}
+.nofind_cons{ width:1000px; overflow:hidden; margin:0 auto; }
+.nofind_cons p{ font-size:16px; color:#555555; line-height:30px; margin-top:20px;}

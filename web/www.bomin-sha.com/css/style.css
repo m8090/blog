@@ -1,0 +1,79 @@
+*{ margin:0; padding:0; border:0;}
+li{ list-style:none;}
+.clear{ clear:both;}
+body{ width:100%; height:100%; background:#68a7da; font-family:"微软雅黑", "黑体", "宋体"; color:#000; font-size:16px; position:relative;}
+.header{ width:100%; height:100px; position:absolute; left:0px; top:0px;}
+.top{ width:990px; margin:0 auto; padding-top:15px;}
+.logo{ width:265px; height:42px; float:left; padding-top:15px;}
+.tel_nav{ width:505px;  float:right; height:100%; padding-top:20px;}
+.tel{ width:211px; height:42px; background:url(../images/tel.png) no-repeat; float:right;}
+.nav{ width:100%; float:right; height:30px; position:relative; padding-top:10px;}
+.nav li{ float:left; margin-left:77px; cursor:pointer; height:17px;}
+.nav_line{ width:81px; height:3px; background:#000; position:absolute; left:0px; bottom:0px;}
+.nav_1{ width:81px;}
+.nav_2,.nav_4{ width:64px;}
+.nav_3{ width:63px;}
+.banner{ width:100%; height:500px; background:url(../images/banner.jpg) no-repeat center top;}
+.menu{ width:100%; height:100px; background:#ffcd00; border:1px dashed #e4b200; border-left:none; border-right:none;}
+.menu ul{ width:990px; height:100px; overflow:hidden; margin:0 auto; border-left:1px dashed #e4b200;}
+.menu ul li{ height:100%; padding-top:20px; float:left; text-align:center; border-right:1px dashed #e4b200;}
+.menu1{ width:242px;}
+.menu2{ width:175px;}
+.menu3{ width:205px;}
+.menu4{ width:167px;}
+.menu5{ width:195px;} 
+.pp{ width:1306px; margin:0 auto; padding-top:109px;}
+.pp div{ width:100%; height:300px; float:left; font-size:0px;}
+.pp_1{ background:url(../images/lc_1.jpg) no-repeat;}
+.pp_2{ background:url(../images/lc_2.jpg) no-repeat;}
+.pp_3{ background:url(../images/lc_3.jpg) no-repeat;}
+.pp_4{ background:url(../images/lc_4.jpg) no-repeat;}
+.pp_5{ background:url(../images/lc_5.jpg) no-repeat;}
+.pp_6{ background:url(../images/lc_6.jpg) no-repeat;}
+.pp_7{ background:url(../images/lc_7.jpg) no-repeat;}
+.use{ width:100%; height:360px; background:#ffcd00; margin-top:95px;}
+.use_t{ width:100%; height:167px; background:url(../images/Use.png) no-repeat center center;}
+.use ul{ width:990px; margin:0 auto;}
+.use li{ width:95px; float:left; text-align:center; line-height:35px; font-size:14px; margin-left:30px;}
+.sqlc{ width:990px; margin:0 auto;}
+.lc_t{ width:100%; height:166px; background:url(../images/easy.png) no-repeat center center;} 
+.sqlc_info{ width:880px; padding-left:110px;}
+.lc_1_2{ width:733px; height:176px; background:url(../images/lc_bg.png) no-repeat; float:left;}
+.lc_1{ width:640px; float:left; line-height:25px; padding-left:92px; padding-top:24px; text-align:left;}
+.lc_xt{ font-size:22px; font-weight:bold;}
+.lc_xinfo{ font-size:14px;}
+.lc_2{ width:640px; float:right; line-height:25px; padding-right:40px; padding-top:24px; text-align:right;}
+.lc_3{ width:693px; height:364px; background:url(../images/lc_2_rep.png) repeat-y left top; float:left; margin-top:15px;}
+.lc3_main{ width:693px; height:351px; background:url(../images/lc_2_top.jpg) no-repeat 1px top; padding-left:92px;}
+.lc3_t{ padding-top:40px;}
+.lc3_xt{ font-size:22px; margin-left:5px;}
+.zl{ width:100%; float:left; padding-top:20px;}
+.xt{ font-size:14px; font-weight:bold; line-height:30px;}
+.x_info{ width:100%; float:left; line-height:25px; font-size:14px;}
+.x_info li{ float:left; height:25px; line-height:25px; background:url(../images/sq.png) no-repeat left center; text-indent:14px; margin-right:20px;}
+.x2t,.x2t_2{ font-size:14px; line-height:25px; width:100%; float:left;}
+.x2t_2{ margin-top:20px;}
+#xx{ width:100%; height:40px; float:left; line-height:20px; background:url(../images/sq.png) no-repeat left 8px; text-indent:0px; padding-left:14px;}
+.lc_3_bottom{ width:693px; height:13px; overflow:hidden; background:url(../images/lc_2_bottom.jpg) no-repeat 1px 0px;}
+.lc_4{ width:94px; height:84px; background:url(../images/lc_4_bg.png) no-repeat; float:left; margin-top:15px; padding-top:28px; padding-left:89px;}
+.lc_5{ width:184px; height:84px; background:url(../images/lc_5_bg.png) no-repeat; float:left; margin-top:15px; padding-top:28px; padding-left:89px; margin-left:20px;}
+.lc_6{ width:237px; height:84px; background:url(../images/lc_other_bg.png) no-repeat; float:left; margin-top:15px; padding-top:28px; padding-left:25px; margin-left:20px;}
+.repay{ width:100%; height:350px; background: url(../images/repay.png) no-repeat center 35px #ffcd00; float:left; margin-top:70px; position:relative; z-index:99;}
+.card{ width:100%; height:198px; position:absolute; left:0px; top:235px; background:url(../images/card.png) no-repeat center center;}
+.contact{ width:100%; height:400px; float:left;}
+.contact_card{ width:990px; height:400px; margin:0 auto;}
+.con_add{ width:244px; height:400px; background:url(../images/con_add.png) no-repeat center center; float:left; margin-left:20px;}
+.con_ewm{ width:85px; height:365px; margin-top:15px; background:url(../images/ewm.png) no-repeat center center #ffcd00; float:left;}
+.map{ width:635px; height:365px; background:url(../images/map.jpg) no-repeat; float:left; margin-top:15px;}
+.footer{ width:100%; height:183px; background:#000;}
+.com_name{ font-size:22px; color:#FFF;}
+.btn{ width:302px; height:55px; margin:0 auto; padding-top:37px;}
+.copy_tip{ width:990px; margin:0 auto; padding-top:25px;}
+.copy{ font-size:13px; line-height:25px; color:#666; float:left;}
+.tip{ font-size:16px; color:#FFF; float:right; padding-top:25px;}
+.tip a{ color:#ffcd00; text-decoration:none;}
+.top_nav{ width:100%; height:60px; background:url(../images/nav_bg.png) repeat; position:fixed; top:-60px; left:0px; z-index:999;}
+.nav2_btn{ width:990px; height:47px; margin:0 auto; padding-top:10px;}
+.nav2{ float:left; width:505px;}
+.btn2{ width:189px; height:41px; float:right;}
+.tel_top{ width:192px; height:37px; float:left; margin-left:45px;}

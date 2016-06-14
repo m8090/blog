@@ -1,0 +1,812 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拍拍贷官网_中国领先互联网金融P2P网贷平台_网络贷款_投资理财</title>
+    <meta name="description" content="拍拍贷-中国领先互联网金融P2P网贷平台 提供网络贷款，投资理财 小额贷款,短期贷款,个人贷款,无抵押贷款服务 拍拍贷理财借贷投资，获得高年收益率回报，超低门槛，超高收益" />
+    <meta name="keywords" content="拍拍贷,拍拍贷官网,P2P网贷,互联网金融,网络贷款,投资理财" />
+    <link rel="stylesheet" type="text/css" href="css/basic.css?091901" />
+    <link rel="stylesheet" type="text/css" href="css/layout.css?091901" />
+    <link href="css/validation-min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="http://www.ppdaicdn.com/favicon.ico" type="image/x-icon" />
+    <script src="js/newRefer.js?v=0807"></script>
+    
+    
+    <link rel="stylesheet" type="text/css" href="css/index20150601.css?v=20150813" />
+    <script type="text/javascript" async defer="defer" src="other/.com/rtt?id=128"></script>
+    <script>
+        var userAgentInfo = navigator.userAgent;
+        var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPod");
+        var flag = true;
+        var lolhref = window.location.href;
+
+        if (lolhref.indexOf("fromwap") != -1) {
+            if (getCookie("wapvisted") == null) {
+                addCookie('wapvisted', '1', 365, '/', 'www.ppdai.com');
+            }
+        }
+        if (getCookie("wapvisted") == null) {
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    window.location.href = 'http://wap.ppdai.com/';
+                }
+            }
+        }
+
+        //if (lolhref.indexOf("fromwap") != -1) {
+        //    if ($.cookie("wapvisted") == null) {
+        //        $.cookie("wapvisted", "1", { expires: 365, path: '/', domain: 'www.ppdai.com', secure: false });
+        //    }
+        //}
+        //if ($.cookie("wapvisted") == null) {
+        //    for (var v = 0; v < Agents.length; v++) {
+        //        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+        //            window.location.href = 'http://wap.ppdai.com/';
+        //        }
+        //    }
+        //}
+
+        //获取cookie
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg))
+
+                return unescape(arr[2]);
+            else
+                return null;
+        }
+
+        //添加cookie
+        function addCookie(name, value, expires, path, domain) {
+            var str = name + "=" + escape(value);
+            if (expires != "") {
+                var date = new Date();
+                date.setTime(date.getTime() + expires * 24 * 3600 * 1000);//expires单位为天
+                str += ";expires=" + date.toGMTString();
+            }
+            if (path != "") {
+                str += ";path=" + path;//指定可访问cookie的目录
+            }
+            if (domain != "") {
+                str += ";domain=" + domain;//指定可访问cookie的域
+            }
+            document.cookie = str;
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="top PPD_header_nav">
+        <div class="top_inner w1188center clearfix PPD_login_status">
+            
+        </div>
+    </div>
+    <!--头部菜单-->
+ <!--头部开始-->
+    <div class="mainNav">
+        <div class="mainNav_inner clearfix w1188center">
+            <h1 class="logo">
+                <a href="http://www.ppdai.com/"><img src="images/logo.png" alt="" /></a>
+            </h1>
+            <ul id="tabIcon">
+                <li class="hasSubMenu">
+                    <a href="http://invest.ppdai.com/index" {1} category="Lend" id="top-menu-lend">我要投资</a>
+                    <div class="subMenu">
+                        <a href="http://www.ppdai.com/lend">散标列表</a>
+                        <a href="http://product.invest.ppdai.com/" class="top-menu-userasset">拍活宝</a>
+                        <a href="http://www.ppdai.com/product/plan/rainbow">彩虹计划</a>
+                        <a href="http://invest.ppdai.com/product/info?producttype=kljh">快利计划</a>
+                      	 <a href="http://invest.ppdai.com/product/info?producttype=hfb">汇富宝</a>
+                        <a href="http://www.ppdai.com/debtdeal/AlldebtList/DebtList">债权交易</a>
+                        <a href="http://www.ppdai.com/howtolend">如何投资</a>
+                        <a href="http://www.ppdai.com/help/principalprotection">安全保障</a>
+                        <a href="http://www.ppdai.com/help/nuDeftFinancierPlan">新手专区</a>
+                    </div>
+                </li>
+                <li class="hasSubMenu">
+                    <a href="http://loan.ppdai.com/borrow" {2} category="Borrow">我要借款</a>
+                    <div class="subMenu">
+                        <a href="http://loan.ppdai.com/borrow">我要借款</a>
+                        <a href="http://www.ppdai.com/help/howtoborrow">如何借款</a>
+                        <a href="http://www.ppdai.com/borrow/interestcalculate">利息计算器</a>
+                    </div>
+                </li>
+
+                <li class="hasSubMenu">
+                    <a href="http://www.ppdai.com/account" {3} category="Account">我的账户</a>
+                    <div class="subMenu">
+                        <a href="http://loan.ppdai.com/account/borrow">借款账户</a>
+                        <a href="http://www.ppdai.com/account/lend">投资账户</a>
+                    </div>
+                </li>
+                <li class="hasSubMenu">
+                    <a href="http://www.ppdai.com/help/aboutus" {4} category="About" id="top-menu-about">关于我们</a>
+                    <div class="subMenu">
+                        <a href="http://www.ppdai.com/help/aboutus">关于我们</a>
+                        <a href="http://www.ppdai.com/help/howworks">工作原理</a>
+                      	<a href="http://ppdai.zhiye.com/" target="_blank">招贤纳士</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--头部结束-->
+
+
+    
+<!-- 顶部占位符-->
+
+	<div class="slideBanner">
+		<div id="kinMaxShow">
+  
+    <div>
+          <a target="_blank" title="冠军榜单" href="http://investactivity.ppdai.com/ranking/index"><img src="images/ef688606-900b-4c21-adcc-5bd83fefd98b.png" /></a>
+    </div>
+  
+    <div>
+          <a target="_blank" title="拍活宝" href="http://product.invest.ppdai.com/"><img src="images/935b1465-15cf-48f5-b36a-bcb4916848c8.jpg" /></a>
+    </div>
+  
+    <div>
+        	<a target="_blank" title="彩虹计划,6种期限任你选" href="http://www.ppdai.com/product/plan/rainbow"><img src="images/79abf6ad-0022-4f47-94b3-8a6ec44d34ec.jpg" /></a>
+    </div>
+  
+    <div>
+          <a target="_blank" title="快利计划" href="http://invest.ppdai.com/product/info?producttype=kljh"><img src="images/de42566c-cfbf-4822-92cd-0f88e9bef355.jpg" /></a>
+    </div>
+  
+    <div>
+          <a target="_blank" title="拍拍贷理财APP" href="http://www.ppdai.com/landingappdownload.html"><img src="images/5aab2c1c-b366-4228-99f0-0d5aca856743.jpg" /></a>
+    </div>
+  
+    <!--div>
+          <a target="_blank" title="汇富宝" href="http://invest.ppdai.com/product/info?producttype=hfb"><img src="images/dc7623d9-deb9-4a21-a420-297d677b8ab4.jpg" /></a>
+    </div>
+  
+    <div>
+          <a target="_blank" title="拍拍贷顺利完成C轮融资" href="http://www.ppdai.com/help/mediaReports123"><img src="images/6bfefa60-af93-4e52-8a1e-f92d913b6938.jpg" /></a>
+    </div -->
+      
+</div>
+
+<div class="bannerRight">
+    <div class="inner">
+        <div class="title" style="padding-top: 60px;padding-bottom: 14px;">
+            <h3>
+                简单、快速、借得到！
+            </h3>
+           
+        </div>
+        <div class="content">
+            <h3>
+                拍拍贷历史年化收益率
+            </h3>
+            <p>
+                平均<strong>12%-20%</strong>
+            </p>
+        </div><a href="/lend" class="bannerA pos1">我要投资</a><a href="/borrow" class="bannerA pos2">我要借款</a>
+    </div>
+</div>
+	</div>
+<div class="index_propaganda">
+    <div class="wrap clearfix">
+        <div class="index_propaganda_left">
+            <div class="part" style="width: 136px">
+                <img src="images/safe.png" alt="" />
+                <h3>安全</h3>
+                <p>风险备用金计划</p>
+                <p>安全有保障</p>
+            </div>
+            <div class="part" style="width: 136px">
+                <img src="images/professional.png" alt="" />
+                <h3>专业</h3>
+                <p>规范操作：七年历史</p>
+                <p>最多用户的选择</p>
+            </div>
+            <div class="part" style="width: 145px;">
+                <img src="images/tuhao.png" alt="" />
+                <h3>有钱</h3>
+                <p>无论是资金，还是收益</p>
+                <p>拍拍贷总能让你有钱</p>
+            </div>
+        </div>
+
+        <!--数据统计-->
+        <div class="index_propaganda_right">
+    <div class="inner">
+        <div class="tag pos1">
+            至今
+        </div>
+        <h3>
+            8,921,379
+        </h3>
+        <p>
+            人发现并注册拍拍贷
+        </p>
+        <div class="tag pos2">
+            上月
+        </div>
+        <div class="info">
+            <strong>618,291</strong>人次借款
+        </div>
+        <div class="info">
+            <strong>2,037,520</strong>人次投资
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="wrap clearfix">
+        <div class="index_propaganda_left bgno1"></div>
+        <!--投资排行榜-->
+        <div class="index_propaganda_right" style="margin-top: 23px;" id="rank">
+        </div>
+    </div>
+</div>
+
+<div class="index_info">
+    <div class="wrap clearfix">
+        <div class="infoLeft">
+            <div class="tabNav">
+                <ul class="clearfix">
+                    <li class="first current">投资信息</li>
+                    <li class="second">借款信息</li>
+                </ul>
+            </div>
+            <div class="tabContent">
+                <!--投资信息-->
+                <div class="borrowInfo" style="display: block;">
+                        <div class="part">
+                            <div class="borrowInfo_title clearfix">
+                                <div class="sum clearfix"><i></i><span>剩余金额：&#165;521</span></div>
+                                <div class="name clearfix"><i></i><span></span></div>
+                            </div>
+                            <div class="borrowInfo_detail clearfix">
+                                <div class="borrowInfo_detail_left">
+                                    
+                                    
+                                    <a href="http://help.ppdai.com/Home/List/12" target="_blank"><i class="creditRating AA"></i></a>
+                                    <a href="/list/4667504" class="lendTitle ell">pdu56831774首次借款...</a>
+                                    <p>
+                                        <span>借款金额：</span>
+                                        <strong>&#165;1,000</strong>
+                                        <span>年利率：</span>
+                                        <strong>11<em>%</em></strong>
+                                        <span>借款期限：</span>
+                                        <strong class="nomr">12<em>个月</em></strong>
+                                    </p>
+                                </div>
+                                <div class="borrowInfo_detail_right">
+
+
+                                    <div class="borrowInfo_detail_right_percentInfo clearfix">
+                                        <div class="borrowInfo_detail_right_percentInfo_percent">
+                                            <div class="inner" style="width:48%"></div>
+                                        </div>
+                                        <span>48%</span>
+                                    </div>
+                                    <a href="/list/4667504?from=lend_homepage" class="lendBtn">投标中</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part">
+                            <div class="borrowInfo_title clearfix">
+                                <div class="sum clearfix"><i></i><span>剩余金额：&#165;632</span></div>
+                                <div class="name clearfix"><i></i><span></span></div>
+                            </div>
+                            <div class="borrowInfo_detail clearfix">
+                                <div class="borrowInfo_detail_left">
+                                    
+                                    
+                                    <a href="http://help.ppdai.com/Home/List/12" target="_blank"><i class="creditRating AA"></i></a>
+                                    <a href="/list/4712842" class="lendTitle ell">消费</a>
+                                    <p>
+                                        <span>借款金额：</span>
+                                        <strong>&#165;1,500</strong>
+                                        <span>年利率：</span>
+                                        <strong>10<em>%</em></strong>
+                                        <span>借款期限：</span>
+                                        <strong class="nomr">6<em>个月</em></strong>
+                                    </p>
+                                </div>
+                                <div class="borrowInfo_detail_right">
+
+
+                                    <div class="borrowInfo_detail_right_percentInfo clearfix">
+                                        <div class="borrowInfo_detail_right_percentInfo_percent">
+                                            <div class="inner" style="width:58%"></div>
+                                        </div>
+                                        <span>58%</span>
+                                    </div>
+                                    <a href="/list/4712842?from=lend_homepage" class="lendBtn">投标中</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part">
+                            <div class="borrowInfo_title clearfix">
+                                <div class="sum clearfix"><i></i><span>剩余金额：&#165;707</span></div>
+                                <div class="name clearfix"><i></i><span></span></div>
+                            </div>
+                            <div class="borrowInfo_detail clearfix">
+                                <div class="borrowInfo_detail_left">
+                                    
+                                    
+                                    <a href="http://help.ppdai.com/Home/List/12" target="_blank"><i class="creditRating AA"></i></a>
+                                    <a href="/list/4707323" class="lendTitle ell">pdu41456748首次借款...</a>
+                                    <p>
+                                        <span>借款金额：</span>
+                                        <strong>&#165;1,500</strong>
+                                        <span>年利率：</span>
+                                        <strong>10<em>%</em></strong>
+                                        <span>借款期限：</span>
+                                        <strong class="nomr">6<em>个月</em></strong>
+                                    </p>
+                                </div>
+                                <div class="borrowInfo_detail_right">
+
+
+                                    <div class="borrowInfo_detail_right_percentInfo clearfix">
+                                        <div class="borrowInfo_detail_right_percentInfo_percent">
+                                            <div class="inner" style="width:53%"></div>
+                                        </div>
+                                        <span>53%</span>
+                                    </div>
+                                    <a href="/list/4707323?from=lend_homepage" class="lendBtn">投标中</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part">
+                            <div class="borrowInfo_title clearfix">
+                                <div class="sum clearfix"><i></i><span>剩余金额：&#165;817</span></div>
+                                <div class="name clearfix"><i></i><span></span></div>
+                            </div>
+                            <div class="borrowInfo_detail clearfix">
+                                <div class="borrowInfo_detail_left">
+                                    
+                                    
+                                    <a href="http://help.ppdai.com/Home/List/12" target="_blank"><i class="creditRating AA"></i></a>
+                                    <a href="/list/4706413" class="lendTitle ell">手机app用户的借款</a>
+                                    <p>
+                                        <span>借款金额：</span>
+                                        <strong>&#165;1,500</strong>
+                                        <span>年利率：</span>
+                                        <strong>10<em>%</em></strong>
+                                        <span>借款期限：</span>
+                                        <strong class="nomr">6<em>个月</em></strong>
+                                    </p>
+                                </div>
+                                <div class="borrowInfo_detail_right">
+
+
+                                    <div class="borrowInfo_detail_right_percentInfo clearfix">
+                                        <div class="borrowInfo_detail_right_percentInfo_percent">
+                                            <div class="inner" style="width:46%"></div>
+                                        </div>
+                                        <span>46%</span>
+                                    </div>
+                                    <a href="/list/4706413?from=lend_homepage" class="lendBtn">投标中</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part">
+                            <div class="borrowInfo_title clearfix">
+                                <div class="sum clearfix"><i></i><span>剩余金额：&#165;867</span></div>
+                                <div class="name clearfix"><i></i><span></span></div>
+                            </div>
+                            <div class="borrowInfo_detail clearfix">
+                                <div class="borrowInfo_detail_left">
+                                    
+                                    
+                                    <a href="http://help.ppdai.com/Home/List/12" target="_blank"><i class="creditRating AA"></i></a>
+                                    <a href="/list/4677821" class="lendTitle ell">wtd772132首次借款（w...</a>
+                                    <p>
+                                        <span>借款金额：</span>
+                                        <strong>&#165;1,500</strong>
+                                        <span>年利率：</span>
+                                        <strong>10<em>%</em></strong>
+                                        <span>借款期限：</span>
+                                        <strong class="nomr">6<em>个月</em></strong>
+                                    </p>
+                                </div>
+                                <div class="borrowInfo_detail_right">
+
+
+                                    <div class="borrowInfo_detail_right_percentInfo clearfix">
+                                        <div class="borrowInfo_detail_right_percentInfo_percent">
+                                            <div class="inner" style="width:42%"></div>
+                                        </div>
+                                        <span>42%</span>
+                                    </div>
+                                    <a href="/list/4677821?from=lend_homepage" class="lendBtn">投标中</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    <a href="http://invest.ppdai.com/loan/list" target="_blank" class="indexTabVierMore">查看更多投资信息&gt;</a>
+                </div>
+
+
+                <!--借款信息-->
+                <div class="lendInfo" style="display: none;">
+                    <div class="part">
+                        <h3 class="title blue">
+                            普通贷款标 — 适用工薪族
+                        </h3>
+                        <div class="lendInfo_detailInfo clearfix">
+                            <ul>
+                                <li>21~55周岁中国大陆公民</li>
+                                <li>需有稳定收入来源证明</li>
+                                <li>最快1天到账</li>
+                            </ul>
+                            <a href="http://loan.ppdai.com/firstborrow/createlist" class="quickApply">立即申请</a>
+                        </div>
+                    </div>
+
+                    <div class="part">
+                        <h3 class="title yellow">
+                            网商用户标 — 为网商卖家进货、参加活动以及资金周转而设
+                        </h3>
+                        <div class="lendInfo_detailInfo clearfix">
+                            <ul>
+                                <li>21~55周岁中国大陆公民</li>
+                                <li>需通过网商认证</li>
+                                <li>借款额度根据店铺经营情况调整，最高可达50万</li>
+                            </ul>
+                            <a href="http://loan.ppdai.com/info/taobaouserdocuments" class="quickApply">立即申请</a>
+                        </div>
+                    </div>
+
+                    <div class="part">
+                        <h3 class="title red">
+                            莘莘学子标 — 适用大学生
+                        </h3>
+                        <div class="lendInfo_detailInfo clearfix">
+                            <ul>
+                                <li>19~25周岁中国大陆公民</li>
+                                <li>需通过学籍和视频认证</li>
+                                <li>首次申请全额还款后拍拍贷全额退还成交服务费</li>
+                            </ul>
+                            <a href="http://loan.ppdai.com/firstborrow/createlist/7" class="quickApply">立即申请</a>
+                        </div>
+                    </div>
+                    <div class="part">
+                        <h3 class="title bluelight">
+                            网购达人标 — 适用网购达人
+                        </h3>
+                        <div class="lendInfo_detailInfo clearfix">
+                            <ul>
+                                <li>21-55周岁中国大陆公民</li>
+                                <li>支付宝实名关联</li>
+                                <li>最近三个月中至少有两个月支付宝购物支出分别不少于500元</li>
+                            </ul>
+                            <a href="http://loan.ppdai.com/borrow/createlist/4" class="quickApply">立即申请</a>
+                        </div>
+                    </div>
+                    <div class="part">
+                        <h3 class="title green">
+                            应收安全标 — 适用借出者
+                        </h3>
+                        <div class="lendInfo_detailInfo clearfix">
+                            <ul>
+                                <li>拍拍贷借出者用户</li>
+                                <li>借出信用大于20分</li>
+                                <li>第三方关联1个以上</li>
+                            </ul>
+                            <a href="http://loan.ppdai.com/borrow/createlist/6" class="quickApply">立即申请</a>
+                        </div>
+                    </div>
+                    <a href="/borrow" class="indexTabVierMore">查看更多借款信息&gt;</a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="infoRight">
+            <div class="part">
+                <h4>最新公告	<a href="/help/announcementlist">more&gt;</a></h4>
+                <script type="text/javascript" src="other/.com/help/help/newnotice?num=5"> </script>
+            </div>
+
+            <div class="part">
+                <h4>公司资讯	<a href="/help/mediaReports">more&gt;</a></h4>
+                <script type="text/javascript" src="other/.com/help/help/newmediareport?num=5"> </script>
+            </div>
+
+            <div class="part pos">
+                <a href="/borrow/interestcalculate"><span></span>利息计算器</a>
+            </div>
+            <div class="part report">
+                <h4>谁在报道拍拍贷 <a href="/help/mediareports">more&gt;</a></h4>
+                <a href="/help/mediareports" class="media"></a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="index_case w1188center clearfix">
+
+    <div class="index_case_case">
+        <div class="img">
+            <a href="http://www.ppdai.com/lend/12">
+                <img src="images/indexcase1.jpg" alt="" />
+            </a>
+            <div class="text">
+                <p><a href="http://www.ppdai.com/lend/12">我算是拍拍贷的老用户。他们这里理念很好，就是教育大家分散风险，多投点标，每标的金额小一点。我现在累计投了快2000笔，收益13%左右，还不是最高的，我会继续投下去。</a></p>
+
+            </div>
+        </div>
+        <div class="explain">
+            <h3>
+                投资信用标<br />
+                眼光决定收益！
+            </h3>
+            <p>
+                享受每天自助投资乐趣<br />
+                年化收益可达16%<br />
+                每月还本付息，<br />
+                超低门槛，最低50元可体验
+            </p>
+        </div>
+    </div>
+
+    <div class="index_case_case">
+        <div class="img">
+            <a href="http://www.ppdai.com/product/list">
+                <img src="images/indexcase2.jpg" alt="" />
+            </a>
+            <div class="text">
+                <p><a href="http://www.ppdai.com/product/list">之前听朋友介绍拍拍贷，但是我平时工作比较忙，没时间选标。最近推出的这种“彩虹计划”就很不错，一次性投资，预期年化收益率最高可达12%。我已经抢购了几期，现在就等着到期来收钱了。</a></p>
+            </div>
+        </div>
+        <div class="explain">
+            <h3>
+                彩虹计划<br />
+                省心省力，坐享其成！
+            </h3>
+            <p>
+                省心省力，坐享其成！一键轻松购买，省去每天选标烦恼<br />
+                预期年化收益率最高12%，稳定收益<br />
+                7种期限选择，投资资金参与本金保障计划<br />
+                低门槛，1000元起购
+            </p>
+        </div>
+    </div>
+
+    <div class="index_case_weixin">
+        <div class="img">
+
+            <img src="images/indexcase3.jpg" alt="" />
+        </div>
+        <div class="explain">
+            <h3>
+                微信扫描关注<br />
+                拍拍贷官方服务号
+            </h3>
+            <p>手机上即可完成借款</p>
+        </div>
+    </div>
+</div>
+<!-- 底部占位符-->
+<!-- 体检金入口开始-->
+<div class="expgoldDiv">
+    <div class="expgoldclose"></div>
+    <a href="http://invest.ppdai.com/experiencefund/info" target="_blank"> <div class="expglodlink"></div></a>
+</div>
+<!--体验金入口结束-->
+
+
+    <div class="clear">
+    </div>
+
+    <div class="footer">
+            <div class="footer_inner clearfix">
+                <div class="footer_footerNav">
+                    <dl>
+                        <dt>关于我们</dt>
+                        <dd><a href="http://www.ppdai.com/help/aboutus" target="_blank">公司简介</a></dd>
+                        <dd><a href="http://www.ppdai.com/help/pioneer" target="_blank">管理团队</a></dd>
+                        <dd><a href="http://www.ppdai.com/help/mediaReports"  target="_blank">公司新闻</a></dd>
+                        <dd><a href="http://ppdai.zhiye.com/" target="_blank">招贤纳士</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>业务介绍</dt>
+                        <dd><a href="http://www.ppdai.com/help/howtoborrow" target="_blank">如何借款</a></dd>
+                        <dd><a href="http://www.ppdai.com/howtolend" target="_blank">如何投资</a></dd>
+                        <dd><a href="http://www.ppdai.com/help/howworks" target="_blank">工作原理</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>安全保障</dt>
+                        <dd><a href="http://www.ppdai.com/help/law" target="_blank">法律政策</a></dd>
+                        <dd><a href="http://www.ppdai.com/help/principalprotection" target="_blank">安全保障</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>用户中心</dt>
+                        <dd><a href="http://help.ppdai.com/" target="_blank">帮助中心</a></dd>
+                        <dd><a href="http://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=507669&configID=41819&jid=1392904562" target="_blank">在线客服</a></dd>
+                        <dd><a href="http://www.ppdai.com/home/sitemap" target="_blank">网站地图</a></dd>
+                    </dl>
+                </div>
+                <div class="footer_footerInfo">
+                    <p>热线电话<span>服务时间：08:00 - 20:00</span></p>
+                    <h3>400-184-8888</h3>
+                    <div class="footershare clearfix">
+                        <a class="downloadmb" href="http://www.ppdai.com/landingappdownload.html" target="_blank">下载手机客户端</a>
+                        <div class="span">关注我们
+                            <div class="weixin">
+                                <div style="display: none;" class="weixinpop">
+                                    扫一扫，更多惊喜
+                                    <img alt="" src="images/footerweixinerweima.png">
+                                    <em class="up"></em>
+                                </div>
+                            </div>
+                            <div class="weibo">
+                                <div style="display: none;" class="weibopop">
+                                    点击关注拍拍贷微博<br>
+                                    <a href="http://weibo.com/ppdai07" target="_blank">@ppdai007</a>
+                                    <em class="up"></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="footer_footerBottom">
+            <div style="padding-bottom:0px;" class="f_link_nav">
+    <div class="float_l l-t">
+        网站链接：
+    </div>
+    <div class="float_l r-t">
+        <meta name="baidu-site-verification" content="nweZ85zRaR" />
+        <a href="http://www.ppdai.com/zixun/zt_paipaidaitouzi" target="_blank">拍拍贷怎么样</a><a href="http://m.ppdai.com" target="_blank">拍拍贷手机站</a><a href="http://www.ppdai.com/daikuan/wangsbltzk" target="_blank">透支卡</a><a href="http://xueshengdaikuan.ppdai.com" target="_blank">大学生贷款</a><a href="http://xiaoedaikdk.ppdai.com" target="_blank">小额贷款</a>
+        <div style="float:left" id="show_tab1" onclick="$(&#39;#unshow_tab1&#39;).show();$(&#39;#show_tab1&#39;).hide();">
+            <a href="javascript:void(0);">更多...</a>
+        </div>
+    </div>
+    <div style="height:1px" class="float_l l-t">
+    </div>
+    <div style="display:none" id="unshow_tab1" class="float_l r-t">
+        <a href="http://touzilcchanp.ppdai.com" target="_blank">投资理财</a> <a href="http://www.ppdai.com/zixun/gupiaormjczs" target="_blank">股票知识</a> <a href="http://www.ppdai.com/zixun/zhengquangs" target="_blank">证券公司</a><a href="http://www.ppdai.com/zixun/jinrongzhishi" target="_blank">金融知识</a><a href="http://www.ppdai.com/zixun/gupiaormjczs" target="_blank">股票知识</a><a href="http://www.ppdai.com/zixun/qihuogongsi" target="_blank">期货公司</a><a href="http://www.ppdai.com/zixun/daikuanzhishi" target="_blank">贷款知识</a><a href="http://www.ppdai.com/zixun/waihuizhis" target="_blank">外汇知识</a><a href="http://www.ppdai.com/zixun/rongzifangshi" target="_blank">融资方式</a><a href="http://www.ppdai.com/daikuan/iphone6fqfk/page_1" target="_blank">iphone6分期付款</a><a href="http://www.ppdai.com/daikuan/xiaoedaikuan" target="_blank">急需小额贷款</a><a href="http://www.ppdai.com/daikuan/sqtouzhika" target="_blank">透支卡</a><a href="http://www.ppdai.com/zixun/zt_paipaidaitouzi" target="_blank">拍拍贷投资</a><a href="http://www.ppdai.com/daikuan/pgsjpg6" target="_blank">苹果6</a><a href="http://www.ppdai.com/daikuan/xpxp" target="_blank">夏普分期</a><a href="http://www.ppdai.com/daikuan/ddcddc" target="_blank">电动车分期</a><a href="http://www.ppdai.com/daikuan/hqhqi" target="_blank">宏碁分期</a><a href="http://www.ppdai.com/daikuan/defqde" target="_blank">戴尔分期付款</a><a href="http://www.ppdai.com/daikuan/jsqjsq" target="_blank">净水器分期</a><a href="http://www.ppdai.com/daikuan/hsfqhsbjb" target="_blank">分期付款买华硕</a><a href="http://www.ppdai.com/daikuan/hsfqhsbjb" target="_blank">分期付款买华硕</a><a href="http://www.ppdai.com/daikuan/ppdkxm" target="_blank">拍拍贷可信</a><a href="http://www.ppdai.com/daikuan/zijinzhouzhuan" target="_blank">资金周转</a><a href="http://www.ppdai.com/daikuan/qhtfqhtf" target="_blank">清华同方分期</a><a href="http://www.ppdai.com/daikuan/gjsydzxdkdlxt" target="_blank">助学贷款</a><a href="http://www.ppdai.com/daikuan/xedaikuan" target="_blank">小额贷款</a><a href="http://www.ppdai.com/zixun/wangdai" target="_blank">p2p网贷平台</a><a href="http://www.ppdai.com/zixun/licaichanpin" target="_blank">理财产品</a><a href="http://www.ppdai.com/daikuan/aksakskdzmy" target="_blank">奥克斯分期</a><a href="http://www.ppdai.com/zixun/niwodai" target="_blank">你我贷怎么样</a><a href="http://www.ppdai.com/daikuan/glglkd">格力空调分期</a><a href="http://www.ppdai.com/daikuan/rzrzrq">融资融券</a><a href="http://www.ppdai.com/daikuan/glgl">格力分期</a><a href="http://www.ppdai.com/daikuan/pgfqpgdn">苹果分期</a><a href="http://www.ppdai.com/daikuan/xedaikuan" target="_blank">小额贷款</a><a href="http://www.ppdai.com/daikuan/ppdkxm" target="_blank">拍拍贷网</a><a href="http://www.ppdai.com/daikuan/paipaidaiwkkm" target="_blank">拍拍贷怎么样</a><a href="http://www.ppdai.com/daikuan/ftftrqz" target="_blank">方太分期</a><a href="http://www.ppdai.com/daikuan/jsdjsdnc" target="_blank">金士顿分期</a><a href="http://www.ppdai.com/daikuan/jhqkqjhq" target="_blank">净化器分期</a><a href="http://www.ppdai.com/daikuan/zgmjjd" target="_blank">民间借贷</a><a href="http://www.ppdai.com/daikuan/tbfqtbxykfq" target="_blank">淘宝分期</a><a href="http://www.ppdai.com/daikuan/zqzxzqgb" target="_blank">中信证券</a><a href="http://www.ppdai.com/daikuan/defqde" target="_blank">戴尔分期</a><a href="http://www.ppdai.com/daikuan/lxfqlx" target="_blank">联想分期</a><a href="http://www.ppdai.com/daikuan/wudiyadk1" target="_blank">无抵押个人贷款</a><a href="http://www.ppdai.com/daikuan/xuesdaikuan" target="_blank">助学贷款</a><a href="http://www.ppdai.com/daikuan/wdtiyan" target="_blank">网贷体验</a><a href="http://www.ppdai.com/daikuan/xinyongedu" target="_blank">提升信用额度</a><a href="http://www.ppdai.com/daikuan/p2ptouzi" target="_blank">p2p投资理财</a><a href="http://www.ppdai.com/daikuan/wstouzilicai" target="_blank">网上投资理财</a><a href="http://www.ppdai.com/daikuan/jiyongqian" target="_blank">急用钱贷款</a><a href="http://www.ppdai.com/daikuan/hpfqhp" target="_blank">惠普分期</a><a href="http://www.ppdai.com/daikuan/gaolidgldsflbhm" target="_blank">高利贷</a><a href="http://www.ppdai.com/daikuan/sn4gsjsn" target="_blank">索尼手机分期</a><a href="http://www.ppdai.com/zixun/zaitiexian" target="_blank">再贴现率</a><a href="http://www.ppdai.com/daikuan/fqmcqc" target="_blank">分期买车</a><a href="http://www.ppdai.com/daikuan/sxsx" target="_blank">三星分期</a><a href="http://www.ppdai.com/daikuan/licaichanpin" target="_blank">理财产品</a><a href="http://wangsbltzk.ppdai.com" target="_blank">透支卡</a><a href="http://www.ppdai.com/daikuan/ppdrrdzenmy" target="_blank">拍拍贷和人人贷</a><a href="http://www.ppdai.com/daikuan/xjxj" target="_blank">希捷分期</a><a href="http://www.ppdai.com/daikuan/tmfqtmfqg" target="_blank">天猫分期</a><a href="http://www.ppdai.com/daikuan/rrdaizenmy" target="_blank">人人贷怎么样</a><a href="http://www.ppdai.com/zixun/yonganqihuo" target="_blank">永安期货</a><a href="http://www.ppdai.com/daikuan/ppdkxm" target="_blank">拍拍贷网</a><a href="http://www.ppdai.com/daikuan/gjkfyhzxdkxtdl/page_16" target="_blank">助学贷款</a> <a href="http://www.ppdai.com/daikuan/xiaofeidaikuan" target="_blank">个人消费贷款</a><a href="http://www.ppdai.com/daikuan/jyjydj" target="_blank">九阳豆浆机分期</a><a href="http://www.ppdai.com/daikuan/xueshengdaikuan" target="_blank">学生贷款</a><a href="http://www.ppdai.com/daikuan/glsgls" target="_blank">格兰仕分期</a> <a href="http://www.ppdai.com/daikuan/hmhmsj" target="_blank">红米分期</a> <a href="http://www.ppdai.com/daikuan/mpmacbookpro" target="_blank">macbook pro分期</a> <a href="http://www.ppdai.com/daikuan/mamacbookair" target="_blank">macbook air分期</a> <a href="http://www.ppdai.com/daikuan/idipadmini" target="_blank">ipad mini分期</a>  <a href="http://www.ppdai.com/daikuan/idipadair" target="_blank">ipad air分期</a>  <a href="http://www.ppdai.com/daikuan/trzzhxqyejtrzpt" target="_blank">小企业e家</a> <a href="http://www.ppdai.com/zixun/caijingmingren" target="_blank">财经名人</a>  <a href="http://www.ppdai.com/daikuan/thipodtouch" target="_blank">ipod touch分期</a>   <a href="http://www.ppdai.com/daikuan/t5ipodtouch5" target="_blank">ipod touch5分期</a>    <a href="http://www.ppdai.com/daikuan/lxdklxzj" target="_blank">留学贷款</a>  <a href="http://www.ppdai.com/daikuan/xcdkxc" rget="_blank">学车贷款</a> <a href="http://www.ppdai.com/daikuan/pxdkpx" rget="_blank">培训贷款</a> <a href="http://www.ppdai.com/daikuan/kddkkd" rget="_blank">开店贷款</a>  <a href="http://www.ppdai.com/daikuan/zjzzzjzz" rget="_blank">资金周转</a>  <a href="http://www.ppdai.com/daikuan/5siphone5sjg" rget="_blank">iph5s分期</a> <a href="http://www.ppdai.com/daikuan/i5iphone4s" rget="_blank">iph5分期</a> <a href="http://www.ppdai.com/daikuan/jieqgrksjq1000" rget="_blank">借钱</a> <a href="http://www.ppdai.com/daikuan/5siphone5sjg" rget="_blank">iphone5s分期</a>  <a href="http://www.ppdai.com/daikuan/idipad" rget="_blank">ipad分期</a> <a href="http://www.ppdai.com/daikuan/mkmacbook" rget="_blank">macbook分期</a>  <a href="http://www.ppdai.com/daikuan/jsqjsq" rget="_blank">加湿器分期</a> <a href="http://www.ppdai.com/daikuan/ymhymh
+" rget="_blank">雅马哈分期</a> <a href="http://www.ppdai.com/daikuan/idipadmini" rget="_blank">ipad mini分期</a> <a href="http://jiyongmoney.ppdai.com" target="_blank">急需用钱</a>
+    </div>
+</div>
+<div style="padding-bottom:0px;" class="f_link_nav">
+    <div class="float_l l-t">
+        友情链接：
+    </div>
+    <div class="float_l r-t">
+        <a href="http://www.gucheng.com" target="_blank">股城网</a>
+        <a href="http://www.ggcj.com/" target="_blank">呱呱财经</a>
+        <a href="http://www.xftz.cn" target="_blank">幸福黄金网</a>
+        <a href="http://www.xiangrikui.com/" target="_blank">向日葵保险网</a> 
+        <a href="http://www.forex.com.cn/" target="_blank">外汇通</a>
+        <div style="float:left" id="show_tab" onclick="$(&#39;#unshow_tab&#39;).show();$(&#39;#show_tab&#39;).hide();">
+            <a href="javascript:void(0);">更多...</a>
+        </div>
+    </div>
+    <div style="height:1px" class="float_l l-t">
+    </div>
+    <div style="display:none" id="unshow_tab" class="float_l r-t" >
+      
+      <a href="http://www.csai.cn/" target="_blank">理财产品</a> 
+      <a href="http://www.zhijinwang.com" target="_blank">中国纸金网</a>
+      <a href="http://www.xyz.cn/" target="_blank">新一站保险网</a> 
+      <a href="http://www.gpcxw.com" target="_blank">爱股网</a> 
+      <a href="http://money.laoqianzhuang.com" target="_blank">投资理财</a>
+      <a href="http://www.jfinfo.com" target="_blank">丰华财经</a>
+      <a href="http://www.p2peye.com" rel="nofollow" target="_blank">网贷天眼</a>
+      <a href="http://www.xs9999.com/" target="_blank">贵金属投资</a>
+      <a href="http://www.baobao18.com" target="_blank">保保网</a>
+      <a href="http://licai.cofool.com/" target="_blank">同城理财</a>
+      <a href="http://www.diyizby.com" target="_blank"> 纸白银</a>
+      <a href="http://www.wanyiwang.com" target="_blank">保险资料</a>
+      <a href="http://www.dajiabao.com" target="_blank">大家保</a>
+      <a href="http://www.henanjinrong.com/" target="_blank">河南金融网</a>
+      <a href="http://www.guijinshu.com" target="_blank">贵金属</a>
+      <a href="http://www.roadoor.com" target="_blank">贷款</a>
+      <a href="http://www.silver.org.cn" target="_blank">白银价格</a>
+      <a href="http://www.hzins.com/study/" target="_blank">惠择保险网</a>
+      <a href="http://www.ourku.com/" target="_blank">酷基金网</a>
+      <a href="http://www.spider.com.cn/" target="_blank">蜘蛛网</a>
+      <a href="http://www.epweike.com/" target="_blank">一品威客网</a>
+      <a href="http://www.axatp.com//" target="_blank">保险</a>
+      <a href="http://www.anxin.com/" target="_blank">P2P网贷</a>
+      <a href="http://www.24k.hk/" target="_blank">金道贵金属</a>
+      <a href="http://www.yahui.cc/" target="_blank">外汇投资</a>
+      <a href="http://www.investide.cn/" target="_blank">投资潮</a> 
+      <a href="http://www.yinhang123.net/" target="_blank">银行贷款利率 </a> 
+      <a href="http://www.wangdaizhijia.com/" target="_blank">网贷之家</a> 
+      <a href="http://www.ppdai.com/help/link" target="_blank">&gt;&gt;更多链接</a>
+    </div>
+</div><!--友情链接-->
+                <div class="indexcopyright">Copyright Reserved 2007-2015©拍拍贷（www.ppdai.com） | 沪ICP备05063398号 | 上海拍拍贷金融信息服务有限公司</div>
+
+
+        </div>
+
+    </div>
+
+    <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/init.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/servicestack-min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="other/.com/status?v=2014&tmp=635803392183710481" type="text/javascript"></script>
+    
+    <script>
+        $(".my-f-l-list li a.on").closest(".my-f-l-list").prev(".my-f-l-nav").addClass("my-f-l-nav-sd");
+        try {
+            $("#tabIcon a[category='" + breadcrumbCategory + "']").addClass("tabon");
+        } catch (e) {
+
+        }
+    </script>
+    
+    <script src="js/jquery.kinMaxShow-1.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index20150601.js?v=20150601" type="text/javascript" charset="utf-8"></script>
+    <!--体验金浮层 开始-->
+    <script type="text/javascript">
+        if (true) { //未登录
+            $('.expgoldDiv').show();
+            $('.expgoldclose').click(function () {
+                $('.expgoldDiv').remove();
+            });
+        }
+    </script>
+    <!--体验金浮层 结束-->
+    <script>
+        $(function () {
+            if (true) {
+                var jsonData = "";
+                var curmonth = "";
+                var prizearray = new Array("5000", "1000", "1000");
+                $.ajax({
+                    type: "get",
+                    url: "http://investactivity.ppdai.com/ranking/getjson?",
+                    dataType: "jsonp",
+                    success: function (data) {
+                        var rankList = data.MonthRankingTop;
+                        for (var i = 0; i < rankList.length; i++) {
+                            var username = (rankList[i].UserName).substr(0, 1) + "***" + (rankList[i].UserName).substr(-1, 1);
+                            var rank = rankList[i].MonthRankingId;
+                            var interest = (rankList[i].Interest * 100).toFixed(2) + "%";
+                            curmonth = rankList[i].Month;
+                            jsonData += "<tr><td>" + rank + "</td><td class='cd2060b'>" + interest + "</td><td>" + username + "</td><td>" + prizearray[i] + "元</td></tr>";
+                        }
+                        jsonData = " <h4 class='rank'>" + curmonth + "月用户投资排行榜 <a href='http://investactivity.ppdai.com/ranking/index' target='_blank'>more&gt;</a></h4>  <div class='tablediv'><table><tr><td width='41'></td><td width='62'>收益率</td><td width='82'>用户</td><td width='72'>奖品</td></tr>" + jsonData + "</table></div>"
+                        $("#rank").html(jsonData);
+                    }
+                });
+            } else {
+                var cont = "<div style='width: 276px;height: 167px;overflow:hidden;'><a href='http://investactivity.ppdai.com/ranking/index' target='_blank'><img src='images/defaultbanner.jpg'></a></div>"
+                $("#rank").html(cont);
+            }
+        });
+    </script>
+
+
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PVQ5D8"
+            height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-PVQ5D8');</script>
+    <!-- End Google Tag Manager -->
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Faab1030ecb68cd7b5c613bd7a5127a40' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</body>
+</html>

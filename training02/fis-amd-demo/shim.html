@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Amd plugin demo</title>
+    <link rel="stylesheet" type="text/css" href="/modules/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/modules/libs/bootstrap/css/bootstrap-theme.css">
+    <!--STYLE_PLACEHOLDER-->
+</head>
+<body>
+
+<link rel="import" href="partials/_nav.html?__inline">
+
+<div id="main">
+    <button id="button" class="btn btn-primary">BootStrap 按钮</button>
+</div>
+
+<script type="text/javascript" src="lib/require.js"></script>
+<!--SCRIPT_PLACEHOLDER-->
+<!--RESOURCEMAP_PLACEHOLDER-->
+<script type="text/javascript">
+    require(['jquery', 'bootstrap'], function ($) {
+        $('#button').click(function() {
+            alert('click');
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+﻿body	{
+	margin:0;
+	padding:0;
+	background:url(../images/Top_BG.jpg) repeat-x top;
+	font-size:12px;
+	font-family:"Microsoft Yahei",Tahoma;
+}
+a	{
+	text-decoration:none;
+}
+img	{
+	border:0;
+}
+.main	{
+	width:960px;
+	margin:0 auto;
+}
+dl,ul,li	{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+dt,dd	{
+	list-style:none;
+	padding:0;
+	margin:0;
+	float:left;
+}
+#Logo	{
+	float:left;
+	width:245px;
+	height:46px;
+	background:url(../images/Logo.jpg) no-repeat;
+	margin-left:20px;
+}
+#Slogan	{
+	float:right;
+	width:300px;
+	height:46px;
+	color:#b5924e;
+	line-height:46px;
+	font-size:20px;
+	font-weight:bold;
+	text-align:right;
+}
+#Tel400	{
+	float:right;
+	width:300px;
+	height:46px;
+	line-height:46px;
+	font-size:20px;
+	font-weight:bold;
+	text-align:right;
+}
+#Tel400Home	{
+	height:46px;
+	line-height:46px;
+	font-size:20px;
+	font-weight:bold;
+	text-align:center;
+}
+.nav dt	{
+	width:120px;
+	height:45px;
+	background:url(../images/Nav_BG.jpg) no-repeat;
+	line-height:45px;
+	text-align:center;
+	font-size:14px;
+	color:white;
+	font-weight:bold;
+}
+.nav dt	a	{color:white;}
+.nav dd	{
+	width:120px;
+	height:45px;
+	line-height:45px;
+	text-align:center;
+	font-size:14px;
+	color:white;
+	font-weight:bold;
+}
+.nav dd	a	{color:white;}
+.homead	{
+	float:left;
+	width:639px;
+	height:301px;
+	padding:0 0 20px 0;
+}
+.homearea	{
+	float:left;
+	width:300px;
+	margin-right:25px;
+}
+.homearea dt	{
+	width:290px;
+	height:20px;
+	border-bottom:3px solid #b5924e;
+	padding:8px 0 0 10px;
+	font-size:14px;
+	color:#b5924e;
+	font-weight:bold;
+}
+.homearea dt a	{
+	color:#b5924e;
+}
+.homearea dd	{
+	width:290px;
+	padding:5px;
+	line-height:20px;
+}
+.homearea dd a:link,a:visited	{color:black;}
+.homearea dd a:hover	{color:gray;}
+.homearealist	dd	{
+	height:25px;
+	border-bottom:1px gray dotted;
+	line-height:25px;
+}
+.homeright_title {
+	float:left;
+	width:307px;
+	height:35px;
+	background-color:#b5924e;
+	text-align:center;
+	line-height:35px;
+	font-size:16px;
+	font-weight:bold;
+	color:white;
+}
+.homeright	{
+	float:left;
+	width:297px;
+	padding:5px;
+}
+.homeicon ul	{
+	width:250px;
+	height:50px;
+	padding:20px;
+}
+.homeicon ul li	{
+	float:left;
+	width:80px;
+	text-align:center;
+}
+.homecase ul	{
+	width:250px;
+	height:50px;
+	padding:5px;
+}
+.homecase ul li	{
+	height:22px;
+	line-height:22px;
+	text-align:left;
+}
+.casesshow	{
+	height:61px;
+	background:url(../images/Casesshow.jpg) no-repeat;
+}
+.casesshow p	{
+	margin:5px 0 0 70px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:22px;
+	color:#eb4b01;
+	font-weight:bold;
+	text-align:center;
+	padding:0;
+}
+.input	{
+	border:1px gray solid;
+}
+.copyright	{
+	height:60px;
+	margin:20px 0 20px 0;
+	text-align:center;
+	border-top:3px solid #b5924e;
+}
+.copyright a	{
+	font-weight:bold;
+	color:#b5924e;
+	line-height:30px;
+}
+#contentor	{
+	float:left;
+	width:918px;
+	border:1px #b5924e solid;
+	padding:20px;
+}
+#contenttitle	{
+	float:left;
+	width:908px;
+	height:30px;
+	border-bottom:3px solid #b5924e;
+	padding-left:10px;
+	font-size:14px;
+	font-weight:bold;
+	color:#b5924e;
+	line-height:30px;
+}
+.content	{
+	float:left;
+	width:918px;
+	padding-top:10px;
+	font-size:14px;
+}
+.content p	{
+	line-height:22px;
+}
+#LoanLeft	{
+	float:left;
+	width:258px;
+	border:1px #cbccce solid;
+}
+.LoanLeftTitle	{
+	float:left;
+	width:258px;
+	height:40px;
+	line-height:40px;
+	background:#b5924e;
+	color:white;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+}
+.LoanLeftContent	{
+	float:left;
+	width:238px;
+	padding:10px;
+}
+.formtxt	{width:70px;height:28px;text-align:right;line-height:28px;}
+.LoanImg	{
+	float:left;
+	width:680px;
+	margin-bottom:20px;
+}
+.LoanContent	{
+	float:left;
+	width:678px;
+	border:1px #cbccce solid;
+}
+.LoanContentTitle	{
+	float:left;
+	width:668px;
+	height:35px;
+	background:url(../images/LoanContentTitleBG.png) repeat-x;
+	border-bottom:1px #cbccce solid;
+	line-height:35px;
+	padding-left:10px;
+	font-weight:bold;
+	color:#666666;
+}
+.LoanCont	{
+	float:left;
+	width:658px;
+	padding:10px;
+	font-size:14px;
+}
+.LoanCont dt	{
+	float:left;
+	width:658px;
+	height:28px;
+	line-height:28px;
+	border-bottom:1px #b5924e solid;
+	margin:10px 0 10px 0;
+}
+.LoanCont dt span	{
+	float:left;
+	padding:0 16px;
+	height:28px;
+	line-height:28px;
+	background:#b5924e;
+	font-weight:bold;
+	color:white;
+}
+.LoanCont dd	{
+	float:left;
+	width:658px;
+	line-height:28px;
+}
+.LoanCont dd a:link,a:visited	{color:black;}
+.LoanCont dd a:hover	{color:gray;}
+h1	{
+	font-size:20px;
+	text-align:center;
+}
+.subarea	{
+	float:left;
+	width:258px;
+	padding-bottom:10px;
+}
+.subarea dt	{
+	width:248px;
+	height:20px;
+	border-bottom:3px solid #b5924e;
+	padding:8px 0 0 10px;
+	font-size:14px;
+	color:#b5924e;
+	font-weight:bold;
+}
+.subarea dt a	{color:#b5924e;}
+.subarea dd	{
+	width:248px;
+	padding:5px;
+	line-height:20px;
+	border-bottom:1px gray dotted;
+}
+.subarea dd a:link,a:visited	{color:black;}
+.subarea dd a:hover	{color:gray;}
+/* ------------------------------------------------- */
+.etabs { margin: 0; padding: 0; }
+.tab { display: inline-block; zoom:1; *display:inline; background: #eee; border: solid 1px #999; border-bottom: none; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; }
+.tab a { font-size: 14px; line-height: 2em; display: block; padding: 0 10px; outline: none; color:black; }
+.tab a:hover { text-decoration: underline; color:gray; }
+.tab.active { background: #fff; padding-top: 6px; position: relative; top: 1px; border-color: #666; color:gray; }
+.tab a.active { font-weight: bold; }
+.tab-container .panel-container { background: #fff; border: solid #666 1px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
+.panel-container { margin-bottom: 10px; }
+.iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+.iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}

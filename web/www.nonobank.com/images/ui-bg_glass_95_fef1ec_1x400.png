@@ -1,0 +1,890 @@
+<!doctype html>
+<!--[if IE 7 ]> <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<html>
+<head>
+<meta charset="utf-8">
+ <meta name="baidu-site-verification" content="qYAn6fhv3A" />
+<title>诺诺镑客 - 国内网上投资和网络借款金融信息服务平台领军者</title>
+<meta name="keywords" content="诺诺镑客，网上理财，网络贷款，网络借款">
+<meta name="description" content="诺诺镑客是国内成立时间最长、最安全可靠的互联网金融信息服务平台之一,提供投资理财和融资借款信息撮合服务，包括但不限于网上投资理财,网络贷款,在线担保等。">
+<meta name="robots" contect="all">
+<meta name="author" contect="nonobank">
+<meta name="ROBOTS" contect="INDEX,FOLLOW">
+<meta name="viewport" id="viewport" content="width=1200,initial-scale=0.5,user-scalable=yes, maximum-scale=1.0" />  
+<!-- <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes" />-->
+<link rel="canonical" href="http://www.nonobank.com" />
+<link type="text/css" href="/minify/min/?f=/Public/style/jquery.bxslider.css,/Public/style/global.css,/Public/style/newreset.css,/Public/ui/1.10.4/themes/smoothness/jquery-ui.css,/Public/v4/css/global.css" rel="stylesheet"/>
+<script type="text/javascript" src="/minify/min/?f=/Public/v4/js/jquery-1.9.1.js,/Public/v4/js/common.js,/Public/js/isMobile.js,/Public/js/Global.js,/Public/ui/jquery-ui.js,/Public/js/jquery.cookie.js&t=81502"></script>
+<script>
+function mobileSlide(id){
+	if(typeof(id)!="string"){ return}
+	$("#"+id).stop().animate({"right":0})
+}
+$(function(){
+	$(".mobile_back").on("click",function(){
+		$(this).parent().parent().stop().animate({"right":"-100%"})
+	})
+		
+})	
+</script>
+
+<!--bbs同步-->
+</head>
+<body style="position:static">
+	<!----mobile sitemap
+	<div class="mobile_tab mobileShow" id="siteMap">
+   		<div class="mobile_lay_title">
+        	<span class="mobile_back"><img src="/Public/v4/images/mobile_back.png" alt="返回"></span>
+            <strong>网站地图</strong>
+        </div>
+        <div class="mobile_lay_content">
+          <ul id="mobile_nav">
+            <li><a href="/Licai/MxPlan">名校聚宝</a></li>
+            <li><a href="/Licai/ClassicPlan">贤达招财</a></li>
+            <li><a href="/Debt">诺诺债转</a></li>
+            <li><a href="/Page/About/Safe" class="mobile_allnav_Rmargin">安全保障</a></li>
+            <li><a href="/XinKe">新客专区</a></li>
+            <li><a href="/Page/AboutUs">关于我们</a></li>
+            <li><a href="javascript:void(0);"></a></li>
+            <li><a href="javascript:void(0);" class="mobile_allnav_Rmargin"></a></li>
+           
+          </ul>
+          <div class="clear"></div>
+      </div>      
+  </div>---->
+	
+    <!-- mobile-login -->
+    <!--<div class="mobile_tab mobile_login mobileShow" id="login">
+    	<div class="mobile_lay_title">
+        	<span class="mobile_back"><img src="/Public/v4/images/mobile_back.png" alt="返回"></span>
+            <strong>登录</strong>
+            <a id="mobile_register_btn" href="/Login">注册</a>
+        </div>
+            <div class="mobile_lay_content">
+            	<form id="mobile_login_form" action="" type="post">
+	            	<ul>	                	
+	                	<li>
+	                        <input class="mobile_login_user" id="username" name="username" type="text" placeholder="请输入您的用户名/手机号">
+	                    </li>
+	                    <li>
+	                        <input class="mobile_login_pwd" type="password" id="password" name="password" placeholder="请输入您的密码">
+	                    </li>
+	                    <li>
+                        <input class="mobile_checkCode" id="checkCode" name="checkCode" type="password" placeholder="请输入安全码">
+                        <img class="checkcodeimg"  id="validate_img" onclick="validate_update('validate_img');" title="看不清图片" src="/Validate/checkCode&amp;i=0.37549157557077706">
+                    	</li>
+	                    <li id="login_tip" style="text-align:center;color:red;"></li>
+	                    <li>
+	                        <input type="hidden" id="login_from" name="login_from" value="pcm">
+	                        <input class="mobile_submit" type="button" value="登录" onclick="javascript:mobileLogin();">
+	                    </li>
+	                </ul>
+	            </form>
+            </div>
+        </form>
+    </div>
+      -->
+    <!-- mobile-register -->
+    <!--<div class="mobile_tab mobile_register mobileShow" id="register">
+    	<div class="mobile_lay_title">
+        	<span class="mobile_back"><img src="/Public/v4/images/mobile_back.png" alt="返回"></span>           
+            <strong>注册</strong>
+            <a id="mobile_login_btn" class="mobile_back">登录</a>
+        </div>
+        <form id="form_reg" method="post" novalidate="novalidate">
+            <div class="mobile_lay_content">
+                <ul>
+                	<li><input class="mobile_login_user" name="username" id="username" type="text" required="required" placeholder="请输入用户名"></li>
+                	<li class="initcheck">6-16位字符，可以是字母、数字、下划线的组合</li>
+                    <li>
+                        <input class="mobile_login_pwd" name="password" id="password" type="password" placeholder="请输入密码">
+                    </li>
+                    <li class="initcheck">6-16位字符，可以是字母、数字、下划线的组合</li>
+                    <li>
+                        <input class="mobile_login_pwd" name="password1" id="password1" type="password1" placeholder="确认登录密码">
+                    </li>
+                    <li class="initcheck"></li>
+                    <li>
+                        <input class="mobile_mobile" name="mobile" id="mobile"  placeholder="请输入常用的手机号码">
+                    </li>
+                    <li class="initcheck">请输入常用的手机号码，以便找回密码</li>
+                    <li id="regist_tip"></li>
+                    <li><input class="mobile_submit" type="submit" value="注册"></li>
+                </ul>
+            </div>
+            </form>
+    </div>-->
+<!-----head start ----->
+    
+    
+<div id="head">
+	<div class="wrap wraplimit" style="position: relative;">
+		<div id="mobiledialog" title="扫一扫访问诺诺镑客" style="display: none; z-index:100005; position:absolute;height:153px;width:126px; left:240px;text-align:center;top:33px;background:url(/Public/v4/images/mobile_bg.png) no-repeat;" >
+    		<img src="/Public/v4/images/mobile.gif" style="padding-top:16px;">
+    	</div>
+    	<div class="headleft fl">
+        	<span><b class="mobileHide" style="font-weight:normal;font-size:12px;">全国投资</b>热线：4000-646-668</span><span><a href="/Help" target="_blank" class="help">帮助中心</a></span><a class="mobile top_a mobileHide" id="" href="/Product/Download" target="_blank">手机客户端</a>
+        </div>
+        <div class="headright fr">
+        
+        	<div class="loginarea fr"> 	
+        	
+	        		<div id="beforelogin" class="fr" style="display:">
+	        		
+	        			<span class="fr">
+		        			<a href="/Login" class="login_btn2" style="font-size:14px;color:#d90a40;">登录</a><a href="/Register" class="login_btn1" style="font-size:14px;color:#fff; text-decoration:none;">注册</a>
+	        			</span>
+	        			<a class="myaccount fr" href="/Account">我的账户</a>
+	        		</div>	    
+	        		    		
+        			<div id='afterlogin' class="fr" style="display:none">
+        			<a class="myaccount" href="/Account">我的账户</a>
+        				<a id='head_name' style="color:#33a1db;" href="/Account"></a><a class="logout" href="/Login/logout">安全退出</a>
+        				
+        			</div>
+        			
+	        			  
+            		
+            </div>
+        	
+            <div class="fr mobileShow fallwidth">
+            	<a href="/Login"><img src="/Public/v4/images/user_icon.png" width="30" /></a>                <a href="javascript:;"  onclick="showSubNav('mobilesubnav',$(this))"><img src="/Public/v4/images/more_icon.png" width="30" /></a>
+                <div class="mobilesubnav">
+                	<a href="/Account">我的账户</a><a href="/Bang">超镑俱乐部</a><a href="http://bbs.nonobank.com">论坛</a><a href="/Help">帮助中心</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----nav start ----->
+    
+<!-----nav end ----->
+</div>
+<div class="headblock"></div>
+
+<div id="nav">
+        <div class="wrap">
+            <div class="logo fl">
+            	<a href="/" class="padHide fl"><img src="/Public/v4/images/logo.png" /></a>
+            	<div class="fl slide_logo">
+            		<ul class="slide_logo_box">
+            			<li><img src="/Public/v4/images/logo_ht.png" /></li>
+            			<li><img src="/Public/v4/images/logo_6year.png" /></li>
+            		</ul>
+            	</div>
+            </div>
+            <div class="nav fr mobileHide">         
+                <span class="showsubnav">我要投资 <img src="/Public/v4/images/menu_arrow.png" />
+                <div class="subnav">
+                	<div>
+                	<a href="/Licai/IntimatePlanListIndex">贴心计划</a>
+                	<a href="/Licai/FinancePlanList">诺诺精选</a>
+                    <a href="/Lend">诺诺散投</a>
+                    <a href="/Debt">诺诺债转</a>
+                    </div>
+                </div> 
+                </span>
+                 <span class="showsubnav">我要借款 <img src="/Public/v4/images/menu_arrow.png" />
+                <div class="subnav">
+                	<div>
+                	<a target="_blank" href="http://mx.nonobank.com">名校贷</a>
+                    <a target="_blank" href="/Register/DaFangDong">大房东</a>
+                    </div>
+                </div>
+                </span>
+                  <a href="/Safe">安全保障</a>  <a href="/XinKe">新客专区</a><a href="/Bang">诺币商城</a><a href="http://bbs.nonobank.com" target="_blank">论坛<img src="/Public/images/new1.gif" style="position: absolute; right:100px; top:5px;"/></a>  <a href="/Page/AboutUs" style="margin-right:10px;">关于我们</a>  
+        	</div>
+        	
+        	
+             
+            <div class="fr mobileShow mobilenav">         
+                <a href="javascript:;" onClick="mobileSlide('siteMap')"><img width="24" src="/Public/v4/images/nav_show_all.png" /></a>
+        	</div>
+        </div>
+    </div>
+<script>
+
+$("#mobileopener").hover(function() {
+    $( "#mobiledialog" ).stop().slideDown();
+},function(){
+	$( "#mobiledialog" ).stop().slideUp();
+	
+});
+
+
+$(function(){
+
+	$(".showsubnav").hover(function(){
+		var _this=$(this);
+		_this.find("div.subnav").show().stop().animate({"height":_this.find("div.subnav").children("div").outerHeight()+"px"});
+	},function(){
+		var _this=$(this);
+			$(this).find("div.subnav").stop().animate({"height":"0px"},function(){
+				_this.find("div.subnav").hide();
+				});
+	})
+
+
+})
+
+$(function(){
+	var unitNumber=0;
+	setTimeout(function(){
+		unitNumber++;
+		if(unitNumber>$(".slide_logo_box li").length-1){
+			$(".slide_logo_box").stop().animate({"top":"0px"});
+			unitNumber=0;
+			}
+		else{
+			$(".slide_logo_box").stop().animate({"top":"-"+$(".slide_logo_box li:eq(0)").height()*unitNumber+"px"})
+		}
+		var _this=arguments.callee;
+		setTimeout(_this,5000);
+		},5000)
+})
+
+</script>
+<div class="clearfix"></div>
+<link type="text/css" href="/Public/style/login.css" rel="stylesheet" />
+
+<script type="text/javascript"
+	src="/minify/min/?f=/Public/js/login.js,/Public/js/md5.js"></script>
+
+	<style>
+.ui-dialog{ background:#fff !important;}
+</style>
+	
+<script type="text/javascript">
+    $(function() {
+        document.onkeydown = function(){};
+        $('#loginpwd').keypress(function(e) {
+        	e=e||event;
+            if (e.keyCode == 13) {
+                doLogin();
+            }
+        });
+        $('#checkCode').keypress(function(e) {
+        	e=e||event;
+            if (e.keyCode == 13) {
+                doLogin();
+            }
+        });
+        function doLogin() {
+            updateLoginWarningTips("登录中，请稍候...");
+            var loginpwd = $('#loginpwd').val();
+            $('#loginpwd').val(MD5(loginpwd));
+            $.ajax({
+                type: "POST",
+                url: "/Login/AjaxLogin",
+                data: $('#loginForm').serialize(),
+                dataType: "json",
+                success: function(data) {
+                    if (data.result == 1) {
+                        rememberme();
+                        $("#loginDiv").dialog("close");
+                        $.cookie("islogin", true, {expires:720});
+                        islogin = true;                        
+                        afterLogin(data.mid);
+                                                $('#topmenu_reg').css('display', 'none');
+                        $('#topmenu_login').css('display', 'none');
+                        $('#topmenu_logout').css('display', '');
+                        $('#toolbar_reg').css('display', 'none');
+                        $('#toolbar_login').css('display', 'none');
+                        $('#toolbar_logout').css('display', '');
+                        $('#beforelogin').css('display', 'none');
+                        $('#afterlogin').css('display', '');
+                        $('#head_name').html(data.name);
+                        $('#mymessage').html(data.msgcount);
+                        $('#myinvest').html(data.earnings);
+                        
+                        // 登录成功之后，去异步登录bbs
+                        $.ajax({
+                			type: "POST",
+                			url: "/Login/UcRsyncLogin/"+data.name+"/0/"+data.bbsToken,
+                			success: function(data1) {
+                				if(data1 != '') {
+	                        		// bbs同步登录javascript语句
+	                        		$("head").append(data1);
+                        		}
+                			}
+                		});
+                    }
+                    else {
+                        updateLoginWarningTips("");
+                        updateLoginErroTips(data.msg);
+                        validate_update('validate_img');
+	                   	$('#validate_code_id').show();
+		 				$("#checkcode_enable").val(true);
+                        $('#loginpwd').val("");
+                        $("#loginpwd").focus();
+                        resizeLoginBox();
+                    }
+
+                }
+            });
+        }
+
+        $("#loginDiv").dialog({
+            width: 500,
+            height: 300,
+            autoOpen: false,
+            modal: true,
+            draggabled: true,
+            title:"登录",
+            buttons:
+          {
+              "登录": function() {
+                  if (validlogin()) {
+                      doLogin();
+                  }
+              },
+              "不是会员": function() {
+                  $(this).dialog("close");
+                  clearLoginTips();
+                  location.href = "/Register";
+               }
+          },
+            close: function() {
+                clearLoginTips();
+            }
+        });
+
+    });
+ function resizeLoginBox(){
+	 
+	 $("#loginDiv").height(function(){
+			return $("#loginDiv")[0].scrollHeight;
+	 	})
+	 }
+function Login()
+{
+	$( "#loginDiv" ).dialog("open");
+	validate_update('validate_img');
+	if($("#checkcode_enable").val())
+	{
+		resizeLoginBox();
+	}
+	
+		resizeLoginBox();
+	try
+	{
+	    _fmOpt = {
+	        partner: 'nonobank',
+	        appName: 'nonobank',
+	        token: 'NN8a8rvjgko5q9irevd0idd63cl0'
+	    };
+	    (function() {
+	        var cimg = new Image(1,1);
+	        cimg.onload = function() {
+	            _fmOpt.imgLoaded = true;
+	        };
+	        cimg.src = "https://fp.fraudmetrix.cn/fp/clear.png?partnerCode=nonobank&appName=nonobank&tokenId=NN8a8rvjgko5q9irevd0idd63cl0";
+	        var fp = document.createElement('script'); fp.type = 'text/javascript'; fp.async = true;
+	        fp.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'static.fraudmetrix.cn/fm.js?ver=0.1';
+	        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fp, s);
+	    })(); 
+	 
+	}
+	catch(e)
+	{
+		
+	}
+	}
+	
+
+$(document).ready(function() {
+    var val = $("#loginname").val();
+    if (val != "") {
+        $("#loginname").siblings("span").hide();
+    } else {
+        $("#loginname").siblings("span").show();
+    }
+
+    var val = $("#loginpwd").val();
+    if (val != "") {
+        $("#loginpwd").siblings("span").hide();
+    } else {
+        $("#loginpwd").siblings("span").show();
+    }
+
+    $("#loginname").focus(function() {
+        $(this).siblings("span").hide();
+    }).blur(function() {
+        var val = $(this).val();
+        if (val != "") {
+            $(this).siblings("span").hide();
+        } else {
+            $(this).siblings("span").show();
+        }
+    });
+
+    $("#loginnamewin_span").click(function() {
+        $(this).hide();
+        $("#loginname").focus();
+    });
+
+    $("#loginname").change(function() {
+        var val = $(this).val();
+        if (val != "") {
+            $(this).siblings("span").hide();
+        } else {
+            $(this).siblings("span").show();
+        }
+        var pasval = $("#loginpwd").val();
+
+        if (pasval != "") {
+            $("#loginpwd").siblings("span").hide();
+        } else {
+            $(this).siblings("span").show();
+        }
+    });
+
+    $("#checkCode").focus(function(){
+    	$(this).siblings("span").hide();
+        })
+    $("#checkCode_span").click(function() {
+    	$(this).hide();
+    	$("#checkCode").focus();
+    })
+    $("#checkCode").blur(function() {
+        var val = $(this).val();
+        if (val != "") {
+            $(this).siblings("span").hide();
+        } else {
+            $(this).siblings("span").show();
+        }
+    });
+
+
+    $("#loginpwd").focus(function() {
+        $(this).siblings("span").hide();
+    }).blur(function() {
+        var val = $(this).val();
+        if (val != "") {
+            $(this).siblings("span").hide();
+        } else {
+            $(this).siblings("span").show();
+        }
+    });
+
+    $("#loginpaswin_span").click(function() {
+        $(this).hide();
+        $("#loginpwd").focus();
+    });
+
+//    $("#loginpwd").change(function() {
+//        $("#loginpwds_span").hide();
+//        $("#loginpwd").focus();
+//    });
+})
+
+</script>
+
+<div id="loginDiv" style="display: none; background:#fff;">
+	<form id="loginForm" style="color: #626262; line-height: 30px;">
+		<div style="text-align: center; height: 18px;">
+			<p class="tips_normal"></p>
+		</div>
+		<div class="login_layer_box">
+			<ul>
+				<li>
+					<div class="login_name">用户名</div>
+					<div class="login_input">
+						<label> <span id="loginnamewin_span"
+							style="position: absolute; color: #BCBCBC; cursor: text; padding-left: 5px;">请输入用户名/手机号</span>
+							<input name="loginname" id="loginname" type="text">
+						</label>
+					</div>
+				</li>
+				<li>
+					<div class="login_name">密码</div>
+					<div class="login_input">
+						<label> <span id="loginpaswin_span"
+							style="position: absolute; color: #BCBCBC; cursor: text; padding-left: 5px;">请输入密码</span>
+							<input name="loginpwd" id="loginpwd" type="password">
+						</label>
+					</div>
+					<div class="login_forget">
+						<a href="/User/findPassword" tabindex="-1" target="_blank">忘记密码?</a>
+					</div>
+				</li>
+				<li id="validate_code_id" style="display:none;">
+					<div class="login_name">安全码</div>
+					<div class="login_input">
+					<div style="float:left;">
+					<span id="checkCode_span" style="position:absolute;color:#BCBCBC;cursor:text;padding-left:5px;">请输入安全码</span>
+					<input name="checkCode" id="checkCode"  type="text" style="width:100px;" />
+					<input type="hidden" id="checkcode_enable" value="">
+					</div>
+					<div class="checkCode_img" style="float:left;"><img style="cursor:pointer" id="validate_img"  onclick="validate_update('validate_img');" title="看不清图片" src="/Validate/checkCode&i=1444713652" width="50" height="30" /></div>
+					</div>
+				</li>
+				<li style="height:20px;">
+					<div class="login_chek" style="*margin-top:-11px;">
+						<input type="checkbox" name="rememberme" value=""checked="checked" id="rememberme">
+					</div>
+					<div class="login_yh" style="font-size: 12px;">
+						<label for="rememberme">记住用户名</label>
+					</div>
+					<div class="login_cooper">
+						<div class="login_cooper_left">
+							<a href="/App/Models/qq/oauth/qq_login.php"> <img
+								src="/Public/images/index_2014/qq.jpg" width="20px"
+								height="20px" title="使用qq登录" />
+							</a>
+						</div>
+						<div class="login_cooper_right" style="font-size: 12px;">
+							<a href="/App/Models/qq/oauth/qq_login.php">QQ登录</a>
+						</div>
+
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</form>
+</div>
+<!-----head end -----><style>
+.error{width:700px; margin:0 auto;padding-top:40px;clear:both; }
+.error_title{background:url(/Public/images/index_2014/error.gif) no-repeat;font-size:28px;font-weight:bold;height:60px; padding:8px 0 0 60px;}
+.error_box{line-height:30px; font-size:14px;padding-left:60px;}
+.error_box a{color:#00b0f0;}
+.error_box a:hover{color:#ff6900;}
+</style>
+    <div id="main" style="background:#fff;height:400px;">       
+        <div id="err_notice" class="error">
+            <div class="error_title">错误提示</div>                    
+                <div class="error_box">
+                    	您正在访问的网页可能已经被删除。建议尝试以下选择：<br />
+                    1、检测网址是否正确。<br />
+                    2、直接访问<a href="/">诺诺首页</a>。<br />
+                    3、去其他地方逛逛。            
+            </div>
+        </div>
+    </div>
+    <!-----foot start ----->
+<div class="bottom clearfix">
+	<div class="wrap">
+    	<div class="foot2_1 fl footlist">
+            	<dl>
+                	<dt>我要投资</dt>
+                    <dd><a href="/Licai/FinancePlanList" target="_blank">诺诺精选</a></dd>
+                    <dd><a href="/Lend" target="_blank">诺诺散投</a></dd>
+                    <dd><a href="/Debt" target="_blank">诺诺债转</a></dd>
+                </dl>
+                <dl>
+                	<dt>我要借款 </dt>
+                    <dd><a href="/Student/" target="_blank">名校贷</a></dd>
+                    <dd><a href="/Register/DaFangDong" target="_blank">大房东</a></dd>
+                </dl>
+                <dl>
+                	<dt>关于我们</dt>
+                    <dd><a href="/Page_About_Intro" target="_blank">公司简介</a></dd>
+                    <dd><a href="/Page_About_Platform" target="_blank">平台介绍</a></dd>
+                    <dd><a href="/Page_About_Team" target="_blank">专业团队</a></dd>
+                    <dd><a href="/Page_About_Partner" target="_blank">合作伙伴</a></dd>
+                    <dd><a href="http://www.maizijf.com" target="_blank">麦子金服</a></dd>
+                    <!-- <dd><a href="/Page_About_NewsList" target="_blank">媒体报道</a></dd>
+                    <dd><a href="/Page_About_Safe" target="_blank">安全保障</a></dd>
+                    <dd><a href="/Page_About_Jobs" target="_blank">招贤纳士</a></dd>
+                    <dd><a href="/Page_About_Contact" target="_blank">联系我们</a></dd> -->
+                </dl>
+                <dl>
+                	<dt><a href="/Help" target="_blank">帮助中心</a></dt>
+                    <dd><a href="/Help/Lists/14" target="_blank">我的镑客</a></dd>
+                    <dd><a href="/Help/Lists/18" target="_blank">我要借款</a></dd>
+                    <dd><a href="/Help/Lists/22" target="_blank">我要投资</a></dd>
+                    <dd><a href="/Help/Lists/30" target="_blank">资费说明</a></dd>
+                    <dd><a href="/Blacklist" target="_blank">公开查询</a></dd>
+                </dl>
+            </div>
+            <div class="fl foot2_2">
+            	
+            	<img class="fl" src="/Public/v4/images/weixin.jpg" />
+            	<div class="foot2_2_1 fl">
+            		<h2>全国投资热线</h2>
+            		<p class="bigfont red"><b>4000-646-668</b></p>
+            		<span>工作日9:00-21:00</span><br />
+            		<span class="white">节假日9:00-18:00</span>
+            	</div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="foot3_1">
+            	<div class="copy">
+					<a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20120530173312749" target="_blank"class="copy-1">上海工商</a>
+					<a href="http://sh.cyberpolice.cn/infoCategoryListAction.do?act=initjpg" target="_blank" class="copy-2">上海网警网络110</a>
+					<a href="http://www.zx110.org" target="_blank" class="copy-3">网络社会征信网</a>
+					<a href="https://search.szfw.org/cert/l/CX20140807008632008726" target="_blank" class="copy-4">可信网站身份验证</a>
+					<a href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1690159712" target="_blank" class="copy-5">中国信用企业</a>
+					<a href="http://www.anquan.org/authenticate/cert/?site=www.nonobank.com&at=business" target="_blank" class="copy-6">行业验证</a>
+					<a href="https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf%2Fsplash.fdf&amp;sap=&amp;dn=www.nonobank.com&amp;zoneoff=&amp;lang=zh_CN" target="_blank" class="copy-7">中国信用企业</a>
+				</div>
+            	<div class="fr" style="padding:20px 15px 0 0;">
+            	<A href="/Page/About/Contact#wechat"><img src="/Public/v4/images/icon_foot1.png" /></A>
+            	<A href="http://weibo.com/nonobank" target="_blank"><img src="/Public/v4/images/icon_foot2.png"  /></A>
+            	<A href="http://e.t.qq.com/NNbank" target="_blank"><img src="/Public/v4/images/icon_foot3.png"  /></A>
+            	<A href="mailto:service@nonobank.com"><img src="/Public/v4/images/icon_foot5.png"  /></A>
+            	</div>
+            	<div class="copyright">上海诺诺镑客金融信息服务有限公司    |    Copyright © nonobank.com 沪ICP备13003999号</div>
+            	
+            	
+            	
+            </div>
+            
+    </div>
+</div>
+<style>
+
+
+@-webkit-keyframes rotate {
+  from {-webkit-transform:rotate(0deg);}
+  to {-webkit-transform:rotate(360deg);}
+}
+.icon_bg_1{position:absolute; right:0; top:0; z-index:5; background:url(/Public/v4/images/activity/financefestival/icon_ff.png) no-repeat; width:100px; height:72px; }
+.icon_bg{position:absolute; right:0; top:0; z-index:5; background:url(/Public/v4/images/activity/financefestival/icon_bg.png) no-repeat; width:100px; height:72px; }
+.icon_money{position:absolute; right:18px; top:-1px; z-index:3; height:62px; width:62px; background:url(/Public/v4/images/activity/financefestival/icon_money.png) no-repeat; }
+.icon_star{position:absolute; right:14px; top:-1px; z-index:3; height:58px; width:72px; background:url(/Public/v4/images/activity/financefestival/icon_star.png) no-repeat;
+-webkit-animation-name: rotate;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+</style>
+<div class="rightBox mobileHide">
+	<div class="functioncorner">
+	<a title="在线客服" href="http://crm2.qq.com/page/portalpage/wpa.php?f=1&ty=1&ap=&as=&kfuin=4000646668&ws=&referrer=&cref=http%3A%2F%2Fwww.nonobank.com%2F&pt=%E8%AF%BA%E8%AF%BA%E9%95%91%E5%AE%A2-%E9%87%91%E8%9E%8D%E4%BF%A1%E6%81%AF%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0%EF%BC%8C%E6%8F%90%E4%BE%9B%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2%EF%BC%8C%E5%BE%AE%E7%90%86%E8%B4%A2%EF%BC%8C%E5%AE%89%E5%85%A8%E7%90%86%E8%B4%A2%EF%BC%8C%E5%AE%B6%E5%BA%AD%E7%90%86%E8%B4%A2%E7%AD%89%E9%87%91%E8%9E%8D%E4%BF%A1%E6%81%AF%E6%9C%8D%E5%8A%A1%E7%9A%84%E9%A2%86%E8%B7%91%E8%80%85%E3%80%82&a=&aty=&dm=&sv=&sp=&bt=" target="_blank" class="tap1"></a><a href="javascript:;" onclick="showleft('shortCutList1')" title="计算器" class="tap2"></a><a title="意见反馈" href="javascript:;" onclick="showleft('shortCutList2')" class="tap3 "></a><a id="scrollTop" style="display:none;" title="向上" href="javascript:ScrollToID()" class="tap4"></a>
+	</div>
+	<div id="effect" style="float:left;">
+  	<!-- 计算器  -->
+    <div id="shortCutList1" style="position:absolute; right:20px; top:0; width:0px;margin-top:-100px;height:315px;border:1px solid #ccc;background-color:#252525;opacity:0.9;display:none;padding:20px;color:#fff; overflow:hidden">
+      <div id="calculator">
+        <div class="layer_top">
+          <div class="layer_titile">利息计算器</div>
+          <div class="layer_shut"> <a href="javascript:hiddenleft('shortCutList1')"> <img src="/Public/images/index_2014/shut.png" alt="关闭"> </a> </div>
+        </div>
+        <div style="clear:left;"></div>
+        <div style="width:890px;">
+        <div class="layer_box" style="position:static">
+          <ul>
+            <li>
+              <div class="l-left">金额:</div>
+              <div class="l-right">
+                <input name="borrowPrice" id="borrowPrice" value="" />元
+              </div>
+            </li>
+            <li>
+              <div class="l-left">年费率:</div>
+              <div class="l-right">
+                <input name="borrowRate" id="borrowRate" value=""/>
+                %</div>
+            </li>
+            <li>
+              <div class="l-left">期限:</div>
+              <div class="l-right">
+                <input name="borrowExpires" id="borrowExpires" />
+                个月</div>
+            </li>
+            <li>
+              <div class="l-left">收款方式:</div>
+              <div class="l-right">
+                <select name="type" style="height:30px;" id="type">
+                  <option value="1">等额本息</option>
+                  <option value="2">等本等息</option>
+                  <option value="3">先息后本</option>
+                </select>
+              </div>
+            </li>
+            <li style="height:30px;line-height:30px;*height:20px;*line-height:20px;">
+              <div class="l-left-1">
+                <input type="checkbox" name="tableType" id="tableType"/>
+              </div>
+              <div class="l-right"><label for="tableType">显示计划表</label></div>
+            </li>
+            <li style="height:30px;line-height:30px;">
+            <label id="caculatemsg" style="color: red;"></label>
+            </li>
+            <li>
+            <div style="clear: left;"></div>
+            <input type="button"  onclick="Calculation()" value="开始计算" class="button_alert" />
+            </li>
+          </ul>
+        </div>
+        <div id="con1" class="layer_box_1" style="position: static; margin:25px 0 0 20px;">
+          <div id="layer_box_1_inner" class="layer_box_1_inner">
+            <div class="layer_box_1_title">计算结果</div>
+            <div id="result" style="line-height:30px;"></div>
+          </div>
+        </div>
+        <div id="con2" class="layer_box_2" style="position: static; margin: 24px 0 0 20px;">
+          <div class="layer_box_2_inner">
+            <div class="layer_box_1_title">计划表</div>
+            <div class="layer_box_2_list">
+              <ul class="list_ul">
+                <li class="title">
+                  <div>
+                    <div class="label1" style="width:30px;">月份</div>
+                    <div class="label2">月本息</div>
+                    <div class="label2">月本金</div>
+                    <div class="label2">借款余额</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+ 	<!-- 意见反馈 -->
+    <div id="shortCutList2" style="width:0px;margin-top:-100px;height:347px;border:1px solid #ccc;background-color:#252525;opacity:0.9;display:none;padding:20px;color:#fff; overflow:hidden">
+      <div id="calculator" style="width:380px;">
+        <div class="layer_top">
+          <div class="layer_titile">意见反馈</div>
+          <div class="layer_shut"> <a href="javascript:hiddenleft('shortCutList2')"> <img src="/Public/images/index_2014/shut.png" alt="关闭"> </a> </div>
+        </div>
+        <div style="clear:left;"></div>
+        <div>
+         <form id="feedbankform">
+          <ul>
+          	<li style="padding-top:10px;">
+          		感谢您关注诺诺镑客，请留下您的宝贵意见，我们将不断改进！
+          	</li>
+            <li>
+              <div style="padding:10px 0;text-align: center;">
+                <textarea id="suggestion" name="suggestion" rows="6" cols="47" maxlength="180"></textarea>
+              </div>
+            </li>
+            <li style="height:24px;color:red;text-align:center;font-size:12px;font-weight:100;padding-top:10px;">
+            	<label id="feedbackmsg"></label>
+            </li>
+            <li style="padding:40px 0px 0 0;">
+            <input type="button"  onclick="feedback()" value="发送" class=button_feed />
+            </li>
+          </ul>
+          </form>
+        </div>
+       
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+	<div style=" position:absolute; top:300px; right:0">
+		<a href="http://www.nonobank.com/Activity/October" target="_blank">
+			<div class="icon_bg_1"></div>
+		</a>
+	</div>
+	
+</div>
+
+<script>
+$(function(){
+	$(window).scroll(function(){				
+		if(parseInt($(window).scrollTop())>300)
+			{ 
+				$("#scrollTop").fadeIn(); 
+			}
+		else{
+				$("#scrollTop").fadeOut(); 
+			}
+	})
+})
+
+function ScrollToID(){
+	$('html, body').animate({scrollTop: 0})
+	}
+</script>
+
+<script type="text/javascript" src="/Public/js/caculate.js"></script><script type="text/javascript">
+
+/*手机滑动*/
+
+
+/*打开子菜单*/	
+function showSubNav(id,obj){
+	if($("."+id).is(":visible")){
+		$("."+id).slideUp();
+		obj.removeClass("mobilesubnavselected");
+	}
+	else{
+		$("."+id).slideDown()
+		obj.addClass("mobilesubnavselected");	
+	}
+}
+
+</script>
+<div style="display: none;">
+<!--wl的百度访问行为，整站-->
+<!--<script language="javascript" type="text/javascript" src="/Public/js/tj.js"></script>-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9507cba2915f8791df56ad059db2ffb6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+</script> 
+
+
+
+<!-- 隐藏站长统计 -->
+<script type="text/javascript">
+	var links=document.links;
+	for(var i=0;i<links.length;i++)
+	{
+		if(links[i].title == '站长统计')
+		{
+			links[i].style.display='none';
+		}
+		
+	}
+</script>
+
+
+
+
+<!-- Piwik -->
+<script type="text/javascript">
+
+    var _paq = _paq || [];
+    // you can set up to 5 custom variables for each visitor
+    _paq.push(["setCustomVariable", 2, "guid", "V20151013132036803962", "visit"]);
+    _paq.push(["setCustomVariable", 1, "userid", "", "visit"]);
+    // you can set up to 5 custom variables for each action (page view, download, click, site search)
+    _paq.push(["setCustomVariable", 0, "targetpage", "", "page"]);
+    // all parameters are optional, but we recommend to set at minimum productSKU and productName
+    _paq.push(['setEcommerceView',
+    "", // (required) SKU: Product unique identifier
+    "", // (optional) Product name
+    "", // (optional) Product category, or array of up to 5 categories
+    "" // (optional) Product Price as displayed on the page
+    ]);
+    
+        _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+		var isHttps = ("https:" == document.location.protocol) ? true:false;
+        var u = (isHttps ? "https" : "http") + "://analytics.nonobank.com:" + (isHttps?"7443":"7000") +  "/piwik/";
+        _paq.push(['setTrackerUrl', u + 'piwik.php']);
+        _paq.push(['setSiteId', 1]);
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0]; g.type = 'text/javascript';
+        g.defer = true; g.async = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+    })();
+    
+    
+</script>
+<noscript><p><img src="http://analytics.nonobank.com:7000/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+</div>
+
+</body>
+</html></body>
+</html>
