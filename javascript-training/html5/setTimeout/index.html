@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Big Timeout</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/index.js"></script>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <script src="//cdn.fedjs.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
+    <script src="js/fx.js"></script>
+
+</head>
+<body>
+<div class="container pages">
+    <div id="page1"  class="page hide">
+        <p>今夜以茶当酒，齐饮诗中酒，共赏梦里花。</p>
+    </div>
+    <div id="page2" class="page hide">
+        <p>今后以梦为马，各奔人生路，独忆前尘事。</p>
+    </div>
+    <div id="page3" class="page hide">
+        <p>入门生成从号称~</p>
+    </div>
+</div>
+
+
+<script>
+    setTimeout(function () {
+        $("#page1").show();
+    },500);
+    setTimeout(function () {
+        $("#page2").show();
+    },2000);
+    setTimeout(function () {
+        $("#page2").hide();
+        $("#page1").show();
+    },3500);
+    setTimeout(function () {
+        $("#page1").hide();
+        $("#page2").show();
+    },4000);
+    setTimeout(function () {
+        $("#page2").hide();
+        $("#page3").show();
+        $("#page3").animate({
+//            opacity: 1,
+//            top: '50px',
+            right:'100px',
+//            color: '#666',
+//            rotate: '360deg',
+//            translate3d: '0,10px,10px'
+        }, 1000, 'ease-out')
+    },5500);
+//    setTimeout(function () {
+//        $("#page3").hide();
+//    },7000);
+</script>
+
+
+
+</body>
+</html>

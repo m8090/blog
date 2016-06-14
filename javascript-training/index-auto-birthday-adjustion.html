@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动判断身份证号填充到出生日期</title>
+    <script src="//cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+    <!--<script src="//cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min.js"></script>-->
+    <!--<script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>-->
+    <!--<link href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet">-->
+    <script src="//cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link href="//cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.css" rel="stylesheet">
+    <!--<script src="//cdn.bootcss.com/autocomplete.js/0.16.2/autocomplete.min.js"></script>-->
+
+    <script>
+        var list = [
+            {name:"",uno:""},
+
+        ];
+        $("#custNo").autocomplete({source:list});
+    </script>
+
+
+    <script type="text/javascript">
+        function extBirthDay(from,target){
+            var textFill = document.getElementById(from).value;
+            if(textFill.length==18)
+            {
+                var year = textFill.substring(6,10);
+                var month = textFill.substring(10,12);
+                var date=textFill.substring(12,14);
+                document.getElementById(target).value=year+""+month+""+date;
+                document.getElementById("error").innerHTML = "";
+            }
+            else
+            {
+                document.getElementById("error").innerHTML = "请填写正确的身份证号！";
+                document.getElementById(from).value="";
+            }
+        }
+        function checkSlt(DOM){
+            if(DOM.options[DOM.selectedIndex].value == '01'){
+                document.getElementById('financeTerm')[4].selected = true
+            }else if(DOM.options[DOM.selectedIndex].value == '02'){
+                document.getElementById('financeTerm')[4].selected = true
+            }
+        }
+        function checkSlt2(DOM){
+            switch (DOM.options[DOM.selectedIndex].value){
+                case '01':
+                    document.getElementById('financeTerm')[4].selected = true;break;
+                case '02':
+                    document.getElementById('financeTerm')[4].selected = true;break;
+                case '03':
+                    document.getElementById('financeTerm')[3].selected = true;break;
+                case '04':
+                    document.getElementById('financeTerm')[3].selected = true;break;
+                case '06':
+                    document.getElementById('financeTerm')[1].selected = true;break;
+                case '9001':
+                    document.getElementById('financeTerm')[4].selected = true;break;
+                case '05':
+                    document.getElementById('financeTerm')[1].selected = true;break;
+
+            }
+        }
+    </script>
+    <style>
+        form{
+            line-height: 2em;;
+        }
+
+        label{
+            width:100px;display:inline-block;
+            text-align: right;
+        }
+        form input[type=text], form input[type=number]{
+            height:25px;
+            width:200px;
+            padding-left:10px;
+            font-size:14px;
+            letter-spacing: 3px;
+            font-family: Georgia, "Times New Roman", Times, SimSun, "FontAwesome", serif;
+
+        }
+        form input[name=financeAmt]{
+            font-family: Georgia, "Times New Roman", Times, SimSun, "FontAwesome", serif;
+            /*font-weight: bold;*/
+        }
+        form select{
+            height:30px;
+            width:auto;
+        }
+    </style>
+</head>
+<body>
+
+<form action="#" method="get" name="form1">
+    <label for="custNo">客户编号</label>
+    <input type="number" id="custNo" name="custNo" placeholder="请输入..."/>
+    <br/>
+    <label for="subAccount">子账户</label>
+    <select name="subAccount" id="subAccount" >
+        <!-- onchange="if(this.options[this.selectedIndex].value){document.getElementById('bizSysNo')[this.selectedIndex].selected = true}" -->
+        <option value="">-请选择-</option>
+        <option value="001">001 基本子账户</option>
+        <option value="002">002 基本子账户</option>
+        <option value="003">003 基本子账户</option>
+    </select>
+    <br/>
+    <label for="productNo">理财产品</label>
+    <select class="form-control valid" name="productNo" id="productNo" aria-required="true" aria-invalid="false"
+            onchange="checkSlt2(this);">
+        <option value="">-请选择-</option>
+        <option value="02">雪橙年禧B [02]</option>
+        <option value="01">雪橙年禧A [01]</option>
+        <option value="03">雪橙双鑫 [03]</option>
+        <option value="04">雪橙季收 [04]</option>
+        <option value="06">雪橙月月赢 [06]</option>
+        <option value="9001">雪橙宝 [9001]</option>
+        <option value="05">雪橙月收 [05]</option>
+    </select>
+    <br/>
+    <label for="financeTerm">理财期限</label>
+    <select class="form-control" name="financeTerm" id="financeTerm">
+        <option value="">-请选择-</option>
+        <option value="1">1期</option>
+        <option value="3">3期</option>
+        <option value="6">6期</option>
+        <option value="12">12期</option>
+        <option value="18">18期</option>
+        <option value="24">24期</option>
+        <option value="30">30期</option>
+        <option value="36">36期</option>
+    </select>
+    <br/>
+    <label for="lendNo">出借编号</label>
+    <input type="text" class="form-control" name="lendNo" id="lendNo" placeholder="请输入...">
+    <br/>
+
+    <label for="applyType">申请类型</label>
+    <select class="form-control valid" name="applyType" id="applyType" aria-required="true" aria-invalid="false">
+        <option value="01">首次</option>
+    </select>
+    <br/>
+    <label for="bizSysNo">所属系统</label>
+    <select class="form-control" name="bizSysNo" id="bizSysNo" onchange="createBizFlow(this);">
+        <option value="">-请选择-</option>
+        <option value="001">理财网站</option>
+        <option value="002">贷款系统</option>
+        <option value="003">理财销售</option>
+        <option value="004">CTA系统</option>
+    </select>
+    <br/>
+    <label for="financeAmt">理财金额</label>
+    <input type="number" class="form-control" name="financeAmt" id="financeAmt" placeholder="请输入...">
+    <br/>
+    <label for="bizFlow">业务流水号</label>
+    <input type="text" class="form-control valid" name="bizFlow" id="bizFlow"  placeholder="请输入..." aria-required="true" aria-invalid="false">
+    <br/>
+    <label for="applyDate">签约日期</label>
+    <input type="text" class="form-control"  name="applyDate" id="applyDate" placeholder="请输入..." >
+    <br/>
+    <label for="remark">备注</label>
+    <input type="text" class="form-control" name="remark" id="remark" placeholder="请输入...">
+    <br/>
+    <label for="UserId">身份证号：</label>
+    <input id="UserId" type="text" name="UserId"  maxlength="18" onblur="extBirthDay('UserId','BirthDay');" placeholder="请输入..." />
+    <span id="error"></span>
+    <br/>
+    <label for="BirthDay">出生日期：</label>
+    <input id="BirthDay" type="text" name="BirthDay" placeholder="请输入..."/><br/>
+
+
+
+    <br/>
+
+    <input type="submit" value="提交" style="padding:0 10px;color:#fff;background:#000;letter-spacing: 3px;"/><br/>
+    <input type="text" name="get" id="get"/>
+</form>
+
+
+
+
+
+</body>
+</html>

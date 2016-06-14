@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>angular-hover-info-showbox</title>
+    <script src="//cdn.bootcss.com/angular.js/1.5.0/angular.min.js"></script>
+</head>
+<body>
+<h4 info-show hover="hover" style="display:block;background: #f0ad4e;width:300px;height:150px;text-align: center;color:#fff;">
+    <span ng-show="hover" style="color:#fff;font-size:1.2em;">
+    adsfasfas
+    </span>
+</h4>
+</body>
+</html>
+<script>
+    var myApp = angular.module('myApp', []);
+    myApp.directive('infoShow', function(){
+        return {
+            restrict: 'EA',
+            scope: {
+                hover: "=",
+//                style:"@"
+            },
+//            transclude:true,
+//            templateUrl:'<span ng-transclude></span>',
+            link: function($scope, e, attr){
+                e.bind('mouseover', function(){
+                    e.css("cursor", "pointer");
+                    $scope.$apply(function(){
+                        $scope.hover = true;
+                    });
+                });
+                e.bind('mouseleave', function(){
+                    $scope.$apply(function(){
+                        $scope.hover = false;
+                    });
+                });
+            }
+        }
+    });
+</script>

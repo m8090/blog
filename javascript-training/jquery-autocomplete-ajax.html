@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery autocomplete ajax</title>
+    <script src="//cdn.fedjs.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="//cdn.fedjs.com/ajax/libs/autocomplete.js/0.16.0/autocomplete.min.js"></script>
+    <script src="//cdn.fedjs.com/ajax/libs/autocomplete.js/0.16.0/autocomplete.jquery.min.js"></script>
+
+
+    <script>
+        $(function () {
+
+            var websites = [{ "User_LastName": "安春", "user_employeeNo": "0041", "User_UserId": 50233 }, { "User_LastName": "安国兵", "user_employeeNo": "1404", "User_UserId": 51278 }, { "User_LastName": "包小文", "user_employeeNo": "0685", "User_UserId": 50521 }];
+            $("#MainContent_salesperson").autocomplete({
+                    source:websites,
+                    minChars: 1,                   //最少输入字条
+                    max: 12,
+                    autoFill: false,                //是否选多个,用","分开
+                    mustMatch: false,               //是否全匹配, 如数据中没有此数据,将无法输入
+                    matchContains: true,            //是否全文搜索,否则只是前面作为标准
+                    scrollHeight: 220,
+                    width: 500,
+                    multiple: false,
+                    formatItem: function (row, i, max) {                    //显示格式
+                        return '<span style="width:140px">' + row.User_LastName + '</span><span style="width:120px">' + row.User_LastName + '</span><span style="width:120px">' + row.User_LastName + '</span><span>' + row.User_LastName + '</span>';
+                    },
+                    //以什么数据作为搜索关键词,可包括中文,
+                    formatMatch: function (row, i, max) {
+                        return row.User_LastName;
+                    },
+                    formatResult: function (row) {                      //返回结果
+                        return row.User_LastName;
+                    }
+            });
+
+            //  ajax获取后台数据
+//            $.ajax({
+//                contentType:"application/json",
+//                url:"",
+//                dataType:"json",
+//                success: function (msg) {
+//                    if(msg != null && msg.msg != "login_timeout"){
+//                        $("#linknow").autocomplete(msg,{
+//                            minChars:1,
+//                            max:12,
+//                            autoFill:false,
+//                            mustMatch:false,
+//                            matchContains:true,
+//                            scrollHeight:220,
+//                            width:150,
+//                            multipie:false,
+//                            //  显示格式
+//                            formatItem: function (row, i, max) {
+//                                return '<span style="width:72px;">' + row.user_employeeNo + '</span><span style="width:72px;float:right;font-style:normal;font-weight:normal;">' + row.User_LastName + '</span>';
+//                            },
+//                            //  以什么数据作为搜索关键词,可包括中文
+//                            formatMatch: function (row, i, max) {
+//                                return row.user_employeeNo + row.User_LastName;
+//                            },
+//                            //  返回结果
+//                            formatResult: function (row) {
+//                                return row.user_employeeNo + "|" + row.User_LastName;
+//                            }
+//
+//                        }).result(function (e, data, formatted) {
+//                            console.log(data.User_UserId);
+//                        });
+//                    } else if (msg != null && msg.msg == "login_timeout"){
+//                        console.log("登入超时！");
+//                        window.location.href = '../<!example-page!>';
+//                    }
+//                }
+//
+//            });
+        });
+
+
+    </script>
+
+</head>
+<body>
+
+<input type="text" id="MainContent_salesperson"/>
+
+</body>
+</html>

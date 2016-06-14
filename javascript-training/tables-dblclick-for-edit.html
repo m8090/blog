@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>表格双击自动进入编辑状态</title>
+    <style type="text/css"></style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var aTd = document.getElementsByTagName("td");
+
+            for(var i=0;i<aTd.length;i++){
+                aTd[i].onclick=function(){
+                    var oInput = document.createElement("input");
+                    oInput.type="text";
+                    oInput.value=this.innerHTML;
+
+                    oInput.onclick=function(e){
+                        var e=e||event;
+                        window.event?window.event.cancelBubble=true:e.stopPropagation();
+                    };
+                    this.innerHTML="";
+                    this.appendChild(oInput);
+
+                    oInput.onmouseleave=function(){
+                        //this.outerHTML  //<input type="text" value="fafa" />
+                        //this.value   //fafa
+                        //从标签开始到标签结束，包括当中的内容
+                        this.outerHTML = this.value;
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>你好</td><td>我号</td><td>大家好</td>
+    </tr>
+</table>
+
+
+
+
+</body>
+</html>

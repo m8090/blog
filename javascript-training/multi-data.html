@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>门店展示城市地图</title>
+    <style type="text/css">
+
+        #allmap {width: 916px;height: 600px;overflow: hidden; margin-left:75px;margin-top:20px;margin-bottom:50px;}
+        #result {width:100%;font-size:12px;}
+        dl,dt,dd,ul,li{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        dt{
+            font-size:14px;
+            font-family:"微软雅黑";
+            font-weight:bold;
+            border-bottom:1px dotted #000;
+            padding:5px 0 5px 5px;
+            margin:5px 0;
+        }
+        dd{
+            padding:5px 0 0 5px;
+        }
+        li{
+            line-height:28px;
+        }
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=IYAMmGtTL2D6CT0njQrIMiZv"></script>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+</head>
+<body>
+
+<div id="allmap"></div>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map('allmap');
+    var poi = new BMap.Point(90.946306,45.347436);
+    map.centerAndZoom(poi, 5);
+    map.enableScrollWheelZoom();
+
+    var data_info =[
+        [123.43867,41.831056,"沈阳市皇姑区北陵大街21号沈阳天地b座24层","024-31923899"],
+        [121.602675,38.910619,"大连市沙河口区中山路468号中航国际大厦8层","0411-39578788"],
+        [125.309149,43.873785,"长春市工农大路海航荣御2907",""],
+        [118.792078,32.047184,"南京市秦淮区中山南路1号南京中心45楼CD1","025-85551856"],
+        [121.522332,31.233327,"上海市浦东新区浦东南路1118号14楼05-09","021-61106377"],
+        [121.345263,30.734031,"上海市金山区卫清西路709号","021-60138501"],
+        [121.56297,29.873552,"宁波海曙区药行街42号银亿环球中心B座21楼",""],
+        [113.548436,22.241263,"珠海市香洲区前山富华里中心B座304",""],
+        [102.718892,25.043904,"昆明市南屏街88号世纪广场28楼2806",""],
+        [120.473436,36.105481,"青岛市崂山区深圳路222号天泰金融广场B座1211",""],
+        [120.719975,31.329596,"江苏省苏州市苏州工业园区华池街88号1幢901A室","0512-68625893"],
+        [114.031018,22.541148,"深圳市福田区深南大道金润大厦16B16C","0755-82727585"],
+        [113.333242,23.132537,"广东省广州市天河区黄埔大道富力盈隆广场1809-1810室","020-22137399"],
+        [104.055011,30.689551,"四川省成都市金牛区一环路北一段99号环球广场2202-2204","028-83589131"],
+        [104.094329,30.654083,"四川省成都市锦江区芷泉街88号（时代1号）1305号","028-64861856"],
+        [106.540299,29.578951,"重庆市江北区观音桥步行街2号融恒时代广场1804-1805","023-88216506"]
+    ];
+
+
+    for(var i=0;i<data_info.length;i++){
+        var marker = new BMap.Marker(new BMap.Point(data_info[i][0],data_info[i][1]));  // 创建标注
+        var content = "联系地址："+data_info[i][2]+"<br>联系电话："+data_info[i][3];
+        map.addOverlay(marker);               // 将标注添加到地图中
+        addClickHandler(content,marker);
+    }
+
+    var opts = {
+        title  : "雪橙金服",      //标题
+        width  : 320,             //宽度
+        height : 115,              //高度
+        panel  : "panel",         //检索结果面板
+        enableAutoPan : true,     //自动平移
+        searchTypes   :[
+//            BMAPLIB_TAB_SEARCH,   //周边检索
+        BMAPLIB_TAB_TO_HERE,  //到这里去
+//            BMAPLIB_TAB_FROM_HERE //从这里出发
+        ]
+    };
+
+    //  上海浦东
+    var mdpoi1 = new BMap.Point(121.522328,31.23342);
+//    //  上海金山
+//    var mdpoi2 = new BMap.Point(121.345317,30.733969);
+//    //  沈阳
+//    var mdpoi3 = new BMap.Point(123.43867,41.831056);
+//    //  大连
+//    var mdpoi4 = new BMap.Point(121.602675,38.910619);
+//    //    长春
+//    var mdpoi5 = new BMap.Point(125.309149,43.873785    );
+//    //    南京
+//    var mdpoi6 = new BMap.Point(118.792078,32.047184    );
+//    //    宁波
+//    var mdpoi7 = new BMap.Point(121.56297,29.873552    );
+//    //珠海
+//    var mdpoi8 = new BMap.Point(113.548436,22.241263    );
+//    //昆明
+//    var mdpoi9 = new BMap.Point(102.718892,25.043904    );
+//    //青岛
+//    var mdpoi10 = new BMap.Point(120.473436,36.105481    );
+//    //    苏州
+//    var mdpoi11 = new BMap.Point(120.719975,31.329596    );
+//    //    深圳
+//    var mdpoi12 = new BMap.Point(114.031018,22.541148    );
+//    //    广州
+//    var mdpoi13 = new BMap.Point(113.333242,23.132537    );
+//
+//    //成都1
+//    var mdpoi14 = new BMap.Point(104.055011,30.689551    );
+//    //    重庆
+//    var mdpoi15 = new BMap.Point(106.540299,29.578951    );
+//    //成都2
+//    var mdpoi16 = new BMap.Point(104.094329,30.654083    );
+
+    var marker = new BMap.Marker(mdpoi1); //创建marker对象
+//    var marker1 = new BMap.Marker(mdpoi2); //创建marker对象
+//    var marker2 = new BMap.Marker(mdpoi3); //创建marker对象
+//    var marker3 = new BMap.Marker(mdpoi4); //创建marker对象
+//    var marker4 = new BMap.Marker(mdpoi5); //创建marker对象
+//    var marker5 = new BMap.Marker(mdpoi6); //创建marker对象
+//    var marker6 = new BMap.Marker(mdpoi7); //创建marker对象
+//    var marker7 = new BMap.Marker(mdpoi8); //创建marker对象
+//    var marker8 = new BMap.Marker(mdpoi9); //创建marker对象
+//    var marker9 = new BMap.Marker(mdpoi10); //创建marker对象
+//    var marker10 = new BMap.Marker(mdpoi11); //创建marker对象
+//    var marker11 = new BMap.Marker(mdpoi12); //创建marker对象
+//    var marker12 = new BMap.Marker(mdpoi13); //创建marker对象
+//    var marker13 = new BMap.Marker(mdpoi14); //创建marker对象
+//    var marker14 = new BMap.Marker(mdpoi15); //创建marker对象
+//    var marker15 = new BMap.Marker(mdpoi16); //创建marker对象
+
+    marker.enableDragging(); //marker可拖拽
+
+    map.addOverlay(marker); //在地图中添加marker
+//    map.addOverlay(marker1); //在地图中添加marker
+//    map.addOverlay(marker2); //在地图中添加marker
+//    map.addOverlay(marker3); //在地图中添加marker
+//    map.addOverlay(marker4); //在地图中添加marker
+//    map.addOverlay(marker5); //在地图中添加marker
+//    map.addOverlay(marker6); //在地图中添加marker
+//    map.addOverlay(marker7); //在地图中添加marker
+//    map.addOverlay(marker8); //在地图中添加marker
+//    map.addOverlay(marker9); //在地图中添加marker
+//    map.addOverlay(marker10); //在地图中添加marker
+//    map.addOverlay(marker11); //在地图中添加marker
+//    map.addOverlay(marker12); //在地图中添加marker
+//    map.addOverlay(marker13); //在地图中添加marker
+//    map.addOverlay(marker14); //在地图中添加marker
+//    map.addOverlay(marker15); //在地图中添加marker
+
+    marker.addEventListener("click", function(e){
+        new BMapLib.SearchInfoWindow(map, content, opts).open(marker);
+    });
+
+
+
+    function addClickHandler(content,marker){
+        marker.addEventListener("click",function(e){
+            openInfo(content,e);
+//                openInfo2(content,e);
+        });
+    }
+
+    function openInfo(content,e){
+        var p = e.target;
+        var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+        map.openInfoWindow( new BMap.InfoWindow(content,opts),point); //开启信息窗口
+    }
+
+
+
+    //
+    //
+    //    //样式1
+    //    var searchInfoWindow1 = new BMapLib.SearchInfoWindow(map, "信息框1内容", {
+    //        title: "信息框1", //标题
+    //        panel : "panel", //检索结果面板
+    //        enableAutoPan : true, //自动平移
+    //        searchTypes :[
+    //            BMAPLIB_TAB_FROM_HERE, //从这里出发
+    //            BMAPLIB_TAB_SEARCH   //周边检索
+    //        ]
+    //    });
+    //    function openInfoWindow1() {
+    //        searchInfoWindow1.open(new BMap.Point(116.319852,40.057031));
+    //    }
+    //    //样式2
+    //    var searchInfoWindow2 = new BMapLib.SearchInfoWindow(map, "信息框2内容", {
+    //        title: "信息框2", //标题
+    //        panel : "panel", //检索结果面板
+    //        enableAutoPan : true, //自动平移
+    //        searchTypes :[
+    //            BMAPLIB_TAB_SEARCH   //周边检索
+    //        ]
+    //    });
+    //    function openInfoWindow2() {
+    //        searchInfoWindow2.open(new BMap.Point(116.324852,40.057031));
+    //    }
+    //    //样式3
+    //    var searchInfoWindow3 = new BMapLib.SearchInfoWindow(map, "信息框3内容", {
+    //        title: "信息框3", //标题
+    //        width: 290, //宽度
+    //        height: 40, //高度
+    //        panel : "panel", //检索结果面板
+    //        enableAutoPan : true, //自动平移
+    //        searchTypes :[
+    //        ]
+    //    });
+    //    function openInfoWindow3() {
+    //        searchInfoWindow3.open(new BMap.Point(116.328852,40.057031));
+    //    }
+</script>
+
+</body>
+</html>

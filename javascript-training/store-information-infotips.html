@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>门店信息·非检索信息窗口</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        #allmap{width:916px;height:600px;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=IYAMmGtTL2D6CT0njQrIMiZv"></script>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+
+</head>
+<body>
+
+<div id="allmap"></div>
+<script type="text/javascript">
+    var map_centerPoi = new BMap.Point(109.968664,33.493133);
+    var map_zoom = 5;
+    // 百度地图API功能
+    map = new BMap.Map("allmap");
+    map.centerAndZoom(map_centerPoi, map_zoom);
+    map.enableScrollWheelZoom();
+    var data_info =[
+        [123.43867,41.831056,"沈阳市皇姑区北陵大街21号沈阳天地b座24层","024-31923899"],
+        [121.602675,38.910619,"大连市沙河口区中山路468号中航国际大厦8层","0411-39578788"],
+        [125.309149,43.873785,"长春市工农大路海航荣御2907",""],
+        [118.792078,32.047184,"南京市秦淮区中山南路1号南京中心45楼CD1","025-85551856"],
+        [121.522332,31.233327,"上海市浦东新区浦东南路1118号14楼05-09","021-61106377"],
+        [121.345263,30.734031,"上海市金山区卫清西路709号","021-60138501"],
+        [121.56297,29.873552,"宁波海曙区药行街42号银亿环球中心B座21楼",""],
+        [113.548436,22.241263,"珠海市香洲区前山富华里中心B座304",""],
+        [102.718892,25.043904,"昆明市南屏街88号世纪广场28楼2806",""],
+        [120.473436,36.105481,"青岛市崂山区深圳路222号天泰金融广场B座1211",""],
+        [120.719975,31.329596,"江苏省苏州市苏州工业园区华池街88号1幢901A室","0512-68625893"],
+        [114.031018,22.541148,"深圳市福田区深南大道金润大厦16B16C","0755-82727585"],
+        [113.333242,23.132537,"广东省广州市天河区黄埔大道富力盈隆广场1809-1810室","020-22137399"],
+        [104.055011,30.689551,"四川省成都市金牛区一环路北一段99号环球广场2202-2204","028-83589131"],
+        [104.094329,30.654083,"四川省成都市锦江区芷泉街88号（时代1号）1305号","028-64861856"],
+        [106.540299,29.578951,"重庆市江北区观音桥步行街2号融恒时代广场1804-1805","023-88216506"]
+    ];
+    var opts = {
+        width : 250,     // 信息窗口宽度
+        height: 80,     // 信息窗口高度
+        title : "雪橙普惠财富中心" , // 信息窗口标题
+        enableMessage:true,//设置允许信息窗发送短息
+//        panel  : "panel",         //检索结果面板
+//        enableAutoPan : true,     //自动平移
+//        searchTypes:[
+//            BMAPLIB_TAB_SEARCH,   //周边检索
+//            BMAPLIB_TAB_TO_HERE,  //到这里去
+//            BMAPLIB_TAB_FROM_HERE //从这里出发
+//        ]
+    };
+    for(var i=0;i<data_info.length;i++){
+        // 创建标注
+        var marker = new BMap.Marker(new BMap.Point(data_info[i][0],data_info[i][1]));
+        var content = "联系地址："+data_info[i][2]+"<br>联系电话："+data_info[i][3];
+        map.addOverlay(marker);               // 将标注添加到地图中
+        marker.addEventListener("click",function(e){
+            map.openInfoWindow(new BMap.InfoWindow(content,opts),new BMap.Point(e.target.getPosition().lng, e.target.getPosition().lat));
+        });
+    }
+
+
+</script>
+
+</body>
+</html>

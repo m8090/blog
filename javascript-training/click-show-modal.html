@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>用户留存率表单</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <!-- Button trigger modal -->
+    <div id="selectBox" style="width:400px;height:50px;display:block;border:1px solid #eee;float:left;" data-toggle="modal" data-target="#myModal"/></div>
+    <input type="button" class="input-lg" value="打开数据表" data-toggle="modal" data-target="#myModal" style="float:left;"/>
+
+
+    <!-- Modal -->
+    <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <!--<span >&times;</span>-->
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">用户留存率表单</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <td>
+                                <b>点选</b>
+                            </td>
+                            <td>
+                                <b>日留存</b>
+                            </td>
+                            <td>
+                                <b>月留存</b>
+                            </td>
+                            <td>
+                                <b>年留存</b>
+                            </td>
+                            <td>
+                                <b>CdID</b>
+                            </td>
+                            <td>
+                                <b>增长率</b>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <input type="radio" name="result"  value="res1" onclick="queryXa(this);"/>
+                            </td>
+                            <td>
+                                29390
+                            </td>
+                            <td>
+                                49829
+                            </td>
+                            <td>
+                                1029388
+                            </td>
+                            <td>
+                                39
+                            </td>
+                            <td>
+                                12%
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="result"  value="res2" onclick="queryXa(this);"/>
+                            </td>
+                            <td>
+                                37294
+                            </td>
+                            <td>
+                                85643
+                            </td>
+                            <td>
+                                3927238
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                27%
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="result"  value="res3" onclick="queryXa(this);"/>
+                            </td>
+                            <td>
+                                43294
+                            </td>
+                            <td>95643
+                            </td>
+                            <td>
+                                6827238
+                            </td>
+                            <td>37
+                            </td>
+                            <td>
+                                14%
+                            </td>
+                        </tr>
+                        </tbody>
+
+
+                    </table>
+
+
+                    <script>
+                        var selectIn = "";
+                        function queryXa(){
+                            $("table tbody tr").on("click","input[name='result']:checked",function(){
+                                selectIn =  $("table tbody tr").each(function(){
+                                    console.log($(this).text()) ;
+                                });
+                            });
+                        }
+
+                        $("#selectBox").append(selectIn);
+
+
+//                            $(".table-hover tr:eq(2) td").each(function(){
+//                                alert($(this).text());
+//                            });
+//                            $(".table-hover tr:eq(2) td").each(function(){
+//
+//                                var td = $(this).eq(0);
+//                                var td1 = td.first().text();
+//                                console.log(td1);
+//                            });
+//                            alert($(".table-hover").parent());
+
+
+//                   $(".table-hover tbody tr").on("click","input[name='result']:checked",function(){
+//                       $(this).each(function(){
+//                           alert($(this).find("td").text());
+//                       });
+//
+//
+//                   })
+
+
+
+                    </script>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<div class="container">-->
+    <!--<table class="table table-hover query_form_table"  id="dataTable">-->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<th width="10%">选择</th>-->
+            <!--<th width="10%" >班级编号</th>-->
+            <!--<th width="20%">所属系部</th>-->
+            <!--<th width="20%">班级名称</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr>-->
+            <!--<td   align="center"><input  type="radio" name="class"/></td>-->
+            <!--<td  valign="middle" align="center">b0001</td>-->
+            <!--<td  valign="middle" align="center">商学部</td>-->
+            <!--<td  valign="middle" align="center">商0902班</td>-->
+        <!--<tr>-->
+        <!--<tr>-->
+            <!--<td   align="center"><input  type="radio" name="class"/></td>-->
+            <!--<td  valign="middle" align="center">b0002</td>-->
+            <!--<td  valign="middle" align="center">商学部</td>-->
+            <!--<td  valign="middle" align="center">商0903班</td>-->
+        <!--<tr>-->
+        <!--<tr>-->
+            <!--<td   align="center"><input  type="radio" name="class"/></td>-->
+            <!--<td  valign="middle" align="center">b0003</td>-->
+            <!--<td  valign="middle" align="center">商学部</td>-->
+            <!--<td  valign="middle" align="center">商0904班</td>-->
+        <!--<tr>-->
+        <!--<tr>-->
+            <!--<td   align="center"><input  type="radio" name="class"/></td>-->
+            <!--<td  valign="middle" align="center">b0004</td>-->
+            <!--<td  valign="middle" align="center">商学部</td>-->
+            <!--<td  valign="middle" align="center">商0905班</td>-->
+        <!--<tr>-->
+        <!--</tbody>-->
+        <!--<tfoot>-->
+        <!--<button type="button" onclick="getVal();">确定</button>-->
+        <!--<script>-->
+            <!--function getVal(data){-->
+                <!--var classes = eval(data);-->
+                <!--var tbody = $('#dataTable tbody');-->
+                <!--tbody.empty();-->
+                <!--for(i=0; i < classes.length; i ++) {-->
+                    <!--var tr = $('<tr><td>...</td></tr>');-->
+                    <!--tbody.append(tr);-->
+                <!--}-->
+            <!--}-->
+
+        <!--</script>-->
+        <!--</tfoot>-->
+    <!--</table>-->
+<!--</div>-->
+
+</body>
+</html>

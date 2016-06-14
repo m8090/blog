@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>百度地图API显示多个标注点带百度样式信息检索窗口的代码</title>
+    <!-- 原作博客地址：http://blog.csdn.net/a497785609/article/details/24009031 -->
+    <!--css-->
+
+    <!--javascript-->
+    <script src="scripts/jquery-1.9.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=IDvNBsejl9oqMbPF316iKsXR"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+
+    <style>
+        #allmap{
+            min-height: 600px; width: 916px;
+            overflow: hidden;
+        }
+        #result {width:100%;font-size:12px;}
+        dl,dt,dd,ul,li{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        dt{
+            font-size:14px;
+            font-family:"微软雅黑";
+            font-weight:bold;
+            border-bottom:1px dotted #000;
+            padding:5px 0 5px 5px;
+            margin:5px 0;
+        }
+        dd{
+            padding:5px 0 0 5px;
+        }
+        li{
+            line-height:28px;
+        }
+    </style>
+</head>
+<body>
+<div class="demo_main">
+
+
+        <div id="allmap"></div>
+        <script type="text/javascript">
+
+            function map_init() {
+                var map = new BMap.Map("allmap"); // 创建Map实例
+                var point = new BMap.Point(116.307852,40.057031); //地图中心点，广州市
+                map.centerAndZoom(point, 5); // 初始化地图,设置中心点坐标和地图级别。
+                map.enableScrollWheelZoom(true); //启用滚轮放大缩小
+                //地图、卫星、混合模式切换
+                map.addControl(new BMap.MapTypeControl({mapTypes: [BMAP_NORMAL_MAP, BMAP_SATELLITE_MAP, BMAP_HYBRID_MAP]}));
+                //向地图中添加缩放控件
+                var ctrlNav = new window.BMap.NavigationControl({
+                    anchor: BMAP_ANCHOR_TOP_LEFT,
+                    type: BMAP_NAVIGATION_CONTROL_LARGE
+                });
+                map.addControl(ctrlNav);
+                //向地图中添加缩略图控件
+                var ctrlOve = new window.BMap.OverviewMapControl({
+                    anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+                    isOpen: 1
+                });
+                map.addControl(ctrlOve);
+                //向地图中添加比例尺控件
+                var ctrlSca = new window.BMap.ScaleControl({
+                    anchor: BMAP_ANCHOR_BOTTOM_LEFT
+                });
+                map.addControl(ctrlSca);
+
+                var point = new Array(); //存放标注点经纬信息的数组
+                var marker = new Array(); //存放标注点对象的数组
+                var content = new Array(); //存放提示信息窗口对象的数组
+                var searchInfoWindow =new Array();//存放检索信息窗口对象的数组
+                var data_info = [
+                    { title: "雪橙金服·沈阳", point: "123.43867,41.831056", address: "沈阳市皇姑区北陵大街21号沈阳天地b座24层", tel: "024-31923899" },
+                    { title: "雪橙金服·大连", point: "121.602675,38.910619", address: "大连市沙河口区中山路468号中航国际大厦8层", tel: "0411-39578788" },
+                    { title: "雪橙金服·长春", point: "125.309149,43.873785", address: "长春市工农大路海航荣御2907", tel: "" },
+                    { title: "雪橙金服·南京", point: "118.792078,32.047184", address: "南京市秦淮区中山南路1号南京中心45楼CD1", tel: "025-85551856" },
+                    { title: "雪橙金服·上海", point: "121.522332,31.233327", address: "上海市浦东新区浦东南路1118号14楼05", tel: "021-61106377" },
+                    { title: "雪橙金服·金山", point: "121.345263,30.734031", address: "上海市金山区卫清西路709号", tel: "021-60138501" },
+                    { title: "雪橙金服·宁波", point: "121.56297,29.873552", address: "宁波海曙区药行街42号银亿环球中心B座21楼", tel: "" },
+                    { title: "雪橙金服·珠海", point: "113.548436,22.241263", address: "珠海市香洲区前山富华里中心B座304", tel: "" },
+                    { title: "雪橙金服·昆明", point: "102.718892,25.043904", address: "昆明市南屏街88号世纪广场28楼2806", tel: "" },
+                    { title: "雪橙金服·青岛", point: "120.473436,36.105481", address: "青岛市崂山区深圳路222号天泰金融广场B座1211", tel: "" },
+                    { title: "雪橙金服·苏州", point: "120.719975,31.329596", address: "江苏省苏州市苏州工业园区华池街88号1幢901A室", tel: "0512-68625893" },
+                    { title: "雪橙金服·深圳", point: "114.031018,22.541148", address: "深圳市福田区深南大道金润大厦16B16C", tel: "0755-82727585" },
+                    { title: "雪橙金服·广州", point: "113.333242,23.132537", address: "广东省广州市天河区黄埔大道富力盈隆广场1809-1810室", tel: "020-22137399" },
+                    { title: "雪橙金服·成都（1）", point: "104.055011,30.689551", address: "四川省成都市金牛区一环路北一段99号环球广场2202-2204", tel: "028-83589131" },
+                    { title: "雪橙金服·成都（2）", point: "104.094329,30.654083", address: "四川省成都市锦江区芷泉街88号（时代1号）1305号", tel: "028-64861856" },
+                    { title: "雪橙金服·重庆", point: "106.540299,29.578951", address: "重庆市江北区观音桥步行街2号融恒时代广场1804-1805", tel: "023-88216506" }
+
+                ];
+
+                for (var i = 0; i < data_info.length; i++) {
+                    var opts = {
+                        title  : data_info[i].title,      //标题
+                        width  : 300,             //宽度
+                        height : 60,              //高度
+                        panel  : "panel",         //检索结果面板
+                        enableAutoPan : true,     //自动平移
+                        searchTypes   :[
+                            BMAPLIB_TAB_SEARCH,   //周边检索
+                            BMAPLIB_TAB_TO_HERE,  //到这里去
+                            BMAPLIB_TAB_FROM_HERE //从这里出发
+                        ]
+                    };
+                    var p0 = data_info[i].point.split(",")[0]; //
+                    var p1 = data_info[i].point.split(",")[1]; //按照原数组的point格式将地图点坐标的经纬度分别提出来
+                    point[i] = new window.BMap.Point(p0, p1); //循环生成新的地图点
+                    marker[i] = new window.BMap.Marker(point[i]); //按照地图点坐标生成标记
+                    map.addOverlay(marker[i]);
+//                    marker[i].setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+                    //显示marker的title，marker多的话可以注释掉
+//                    var label = new window.BMap.Label(data_info[i].title, { offset: new window.BMap.Size(20, -10) });
+//                    marker[i].setLabel(label);
+                    // 创建信息窗口对象
+                    content[i] = "<p style=’font-size:12px;lineheight:1.8em;’>" + "联系地址：" + data_info[i].address + "</br> 电话：" + data_info[i].tel + "</br></p>";
+                    //创建百度样式检索信息窗口对象
+                    searchInfoWindow[i] = new BMapLib.SearchInfoWindow(map, content[i], opts);
+                    //添加点击事件
+                    marker[i].addEventListener("click",
+                            (function(k){
+                                // js 闭包
+                                return function(){
+                                    //将被点击marker置为中心
+                                    //map.centerAndZoom(point[k], 18);
+                                    //在marker上打开检索信息窗口
+                                    searchInfoWindow[k].open(marker[k]);
+                                }
+                            })(i)
+                    );
+                }
+            }
+            //异步调用百度js
+            function map_load() {
+                var load = document.createElement("script");
+                load.src = "http://api.map.baidu.com/api?v=2.0&ak=IYAMmGtTL2D6CT0njQrIMiZv&callback=map_init";
+                document.body.appendChild(load);
+            }
+            window.onload = map_load;
+        </script>
+
+</div>
+</body>
+</html>
